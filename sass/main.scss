@@ -52,3 +52,20 @@ footer i {
     font-size: 10px;
     text-align: center;
 }
+
+// localisation
+.localisation {
+    background-color: darken($color: lightgray, $amount: 5%);
+    text-align: center;
+    padding: 15px 0;
+}
+
+input {
+    outline: none;
+    border: none;
+    background-color: darken($color: lightgray, $amount: 5%);
+}
+
+.fa-map-marker-alt {
+    padding-right: 10px;
+}
