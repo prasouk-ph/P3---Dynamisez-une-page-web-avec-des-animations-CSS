@@ -6,10 +6,6 @@ body {
   margin: auto;
 }
 
-header {
-  background-color: lightcoral;
-}
-
 main {
   background-color: lightgreen;
 }
@@ -17,7 +13,6 @@ main {
 header {
   text-align: center;
 }
-
 header img {
   width: 50%;
 }
@@ -27,22 +22,18 @@ footer {
   color: white;
   padding: 20px 20px;
 }
-
 footer img {
   filter: invert(100%);
   width: 80px;
 }
-
 footer ul {
   list-style: none;
   padding-left: 0;
   margin: 0;
 }
-
 footer li {
   padding: 5px 0;
 }
-
 footer i {
   padding-right: 10px;
   width: 10px;
@@ -55,14 +46,12 @@ footer i {
   text-align: center;
   padding: 15px 0;
 }
-
-input {
+.localisation input {
   outline: none;
   border: none;
   background-color: #c6c6c6;
 }
-
-.fa-map-marker-alt {
+.localisation i {
   padding-right: 10px;
 }
 
@@ -71,11 +60,9 @@ input {
   text-align: center;
   padding: 30px;
 }
-
-h1 {
+.exploration h1 {
   margin: 0;
 }
-
 .exploration button {
   background: radial-gradient(ellipse at top left, #FF79DA, #9356DC);
   color: white;
@@ -83,4 +70,27 @@ h1 {
   border-radius: 30px;
   padding: 15px 20px;
   font-weight: bold;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+}
+nav button {
+  background-color: lightgray;
+  padding: 30px;
+  margin: 15px;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px 5px rgba(242, 242, 242, 0.75);
+}
+nav button:hover {
+  background: rgba(147, 86, 220, 0.7);
+}
+nav i {
+  font-size: 16px;
+  color: #545454;
+}
+nav i:hover {
+  color: #9356DC;
 }

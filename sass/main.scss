@@ -11,10 +11,6 @@ body {
     margin: auto;
 }
 
-header {
-    background-color: lightcoral;
-}
-
 main {
     background-color: lightgreen;
 }
@@ -22,10 +18,9 @@ main {
 // header
 header {
     text-align: center;
-}
-
-header img {
-    width: 50%;
+    img {
+        width: 50%;
+    }
 }
 
 // footer
@@ -33,28 +28,24 @@ footer {
     background-color: #474747;
     color: white;
     padding: 20px 20px;
-}
-
-footer img {
+    img {
     filter: invert(100%);
     width: 80px;
-}
-
-footer ul {
+    }
+    ul {
     list-style: none;
     padding-left: 0;
     margin: 0;
-}
-
-footer li {
+    }
+    li {
     padding: 5px 0;
-}
-
-footer i {
+    }
+    i {
     padding-right: 10px;
     width: 10px;
     font-size: 10px;
     text-align: center;
+    }
 }
 
 // localisation
@@ -62,16 +53,14 @@ footer i {
     background-color: darken($color: lightgray, $amount: 5%);
     text-align: center;
     padding: 15px 0;
-}
-
-input {
+    input {
     outline: none;
     border: none;
     background-color: darken($color: lightgray, $amount: 5%);
-}
-
-.fa-map-marker-alt {
+    }
+    i {
     padding-right: 10px;
+    }
 }
 
 
@@ -80,18 +69,41 @@ input {
     background-color: lightgray;
     text-align: center;
     padding: 30px;
-}
-
-h1 {
+    h1 {
     margin: 0;
-}
-
-.exploration button {
+    }
+    button {
     background: radial-gradient(ellipse at top left, $color-secondary, $color-primary);
     color: white;
     border: none;
     border-radius: 30px;
     padding: 15px 20px;
     font-weight: bold;
+    }
 }
 
+// functioning
+nav {
+    display: flex;
+    flex-direction: column;
+    button {
+        background-color: lightgray;
+        padding: 30px;
+        margin: 15px;
+        border: none;
+        border-radius: 20px;
+        box-shadow: 0px 0px 10px 5px rgba(242, 242, 242, 0.75);
+        &:hover {
+            background: rgba($color-primary, 0.7);
+        }
+    }
+    i {
+        font-size: 16px;
+        color: darken($color: lightgray, $amount: 50%);
+        &:hover {
+        color: $color-primary;
+        }
+    }
+}
+
+// restaurants
