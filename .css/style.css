@@ -1,0 +1,10 @@
+body {
+  background-color: red;
+}
+body .container {
+  width: 80%;
+  max-width: 1200px;
+  background-color: yellow;
+}
+
+/*# sourceMappingURL=style.css.map */
