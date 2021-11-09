@@ -6,12 +6,9 @@ body {
   margin: auto;
 }
 
-main {
-  background-color: lightgreen;
-}
-
 header {
   text-align: center;
+  padding: 20px;
 }
 header img {
   width: 50%;
@@ -20,7 +17,7 @@ header img {
 footer {
   background-color: #474747;
   color: white;
-  padding: 20px 20px;
+  padding: 20px;
 }
 footer img {
   filter: invert(100%);
@@ -44,7 +41,7 @@ footer i {
 .localisation {
   background-color: #c6c6c6;
   text-align: center;
-  padding: 15px 0;
+  padding: 20px;
 }
 .localisation input {
   outline: none;
@@ -58,7 +55,7 @@ footer i {
 .exploration {
   background-color: lightgray;
   text-align: center;
-  padding: 30px;
+  padding: 20px;
 }
 .exploration h1 {
   margin: 0;
@@ -72,58 +69,57 @@ footer i {
   font-weight: bold;
 }
 
-nav {
+.functioning {
+  padding: 20px;
+}
+.functioning nav {
   display: flex;
   flex-direction: column;
 }
-nav button {
+.functioning nav button {
   background-color: lightgray;
   padding: 30px;
-  margin: 15px;
+  margin: 15px 0;
   border: none;
   border-radius: 20px;
   box-shadow: 0px 0px 10px 5px rgba(242, 242, 242, 0.75);
 }
-nav button:hover {
+.functioning nav button:hover {
   background: rgba(147, 86, 220, 0.7);
 }
-nav i {
+.functioning nav i {
   font-size: 16px;
   color: #545454;
 }
-nav i:hover {
+.functioning nav i:hover {
   color: #9356DC;
 }
 
 .restaurant {
   background-color: lightgray;
-  padding: 30px 0;
+  padding: 20px;
 }
 .restaurant img {
   object-fit: cover;
-  height: 100%;
+  height: 70%;
   width: 100%;
   border-radius: 20px 20px 0px 0px;
 }
-.restaurant .card-container {
-  background-color: blue;
-  display: flex;
-  flex-direction: column;
-}
 .restaurant .card {
-  background-color: red;
   display: flex;
   flex-direction: column;
   border-radius: 20px;
   margin-bottom: 20px;
   position: relative;
+  height: 250px;
 }
 .restaurant .card-content {
   background-color: white;
   border-radius: 0 0 20px 20px;
-  padding: 20px;
+  line-height: 50%;
+  padding-left: 10px;
   position: relative;
-  height: 50%;
+  height: 30%;
 }
 .restaurant .card-content p {
   font-size: large;
@@ -133,10 +129,10 @@ nav i:hover {
   border: none;
   position: absolute;
   right: 5%;
-  bottom: 40%;
+  bottom: 45%;
 }
 .restaurant .card-content i {
-  font-size: 40px;
+  font-size: 24px;
 }
 .restaurant .card-content i:active {
   color: #9356DC;
@@ -146,7 +142,7 @@ nav i:hover {
   color: #32b091;
   font-weight: bold;
   position: absolute;
-  right: 2%;
-  top: 2%;
-  padding: 10px;
+  right: 3%;
+  top: 5%;
+  padding: 10px 15px;
 }
