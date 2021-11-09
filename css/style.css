@@ -1,1 +1,47 @@
+body {
+  margin: auto;
+}
 
+header {
+  background-color: lightcoral;
+}
+
+main {
+  background-color: lightgreen;
+}
+
+header {
+  text-align: center;
+}
+
+header img {
+  width: 50%;
+}
+
+footer {
+  background-color: #474747;
+  color: white;
+  padding: 20px 20px;
+}
+
+footer img {
+  filter: invert(100%);
+  width: 80px;
+}
+
+footer ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+footer li {
+  padding: 5px 0;
+}
+
+footer i {
+  padding-right: 10px;
+  width: 10px;
+  font-size: 10px;
+  text-align: center;
+}
