@@ -3,6 +3,10 @@ $color-primary: #9356DC;
 $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
 
+* {
+    font-family: 'Roboto';
+}
+
 body {
     margin: auto;
 }
@@ -69,3 +73,25 @@ input {
 .fa-map-marker-alt {
     padding-right: 10px;
 }
+
+
+// exploration
+.exploration {
+    background-color: lightgray;
+    text-align: center;
+    padding: 30px;
+}
+
+h1 {
+    margin: 0;
+}
+
+.exploration button {
+    background: radial-gradient(ellipse at top left, $color-secondary, $color-primary);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 15px 20px;
+    font-weight: bold;
+}
+
