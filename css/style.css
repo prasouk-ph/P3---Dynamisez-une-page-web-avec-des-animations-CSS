@@ -86,6 +86,7 @@ footer i {
   box-shadow: 0px 0px 10px 5px #f2f2f2;
   display: flex;
   align-items: center;
+  transition-duration: 0.5s;
 }
 .functioning nav button:hover {
   background: rgba(147, 86, 220, 0.2);
@@ -173,7 +174,10 @@ footer i {
   right: 5%;
   bottom: 45%;
 }
-.restaurant .card-content button::before {
+.restaurant .card-content button:active {
+  color: white;
+}
+.restaurant .card-content button:active::before {
   font-family: "Font Awesome 5 Free";
   content: "\f004";
   font-weight: 900;
@@ -181,9 +185,8 @@ footer i {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}
-.restaurant .card-content button:active > p {
-  color: red;
+  position: relative;
+  right: -24px;
 }
 .restaurant .card .label {
   background-color: #99E2D0;
