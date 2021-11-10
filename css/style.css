@@ -7,11 +7,21 @@ body {
 }
 
 header {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 20px;
+  position: relative;
 }
 header img {
   width: 65%;
+}
+header button {
+  font-size: 24px;
+  border: none;
+  background-color: white;
+  position: absolute;
+  left: 3%;
 }
 
 footer {
@@ -173,4 +183,48 @@ footer i {
   right: 3%;
   top: 5%;
   padding: 10px 15px;
+}
+
+.illustration img {
+  object-fit: cover;
+  width: 100vw;
+  height: 25vh;
+}
+
+.menu {
+  background-color: #F6F6F6;
+  border-radius: 20px;
+}
+.menu .starters {
+  display: flex;
+  flex-direction: column;
+}
+.menu .starters h2 {
+  font-weight: normal;
+  font-size: smaller;
+  position: relative;
+}
+.menu .starters h2::before {
+  content: "";
+  position: absolute;
+  bottom: -25%;
+  background-color: #99E2D0;
+  height: 2px;
+  width: 35px;
+}
+.menu .starters .card-dish {
+  background-color: white;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+.menu .order-confirmation {
+  padding: 50px 0px;
+}
+.menu .order-confirmation button {
+  background: radial-gradient(ellipse at top left, #FF79DA, #9356DC);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 15px 20px;
+  font-weight: bold;
 }

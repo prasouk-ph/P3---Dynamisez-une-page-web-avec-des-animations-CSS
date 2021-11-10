@@ -16,10 +16,20 @@ body {
 
 // header
 header {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: $section-padding;
+    position: relative;
     img {
         width: 65%;
+    }
+    button {
+        font-size: 24px;
+        border: none;
+        background-color: white;
+        position: absolute;
+        left: 3%;
     }
 }
 
@@ -187,6 +197,54 @@ footer {
             right: 3%;
             top: 5%;
             padding: 10px 15px;
+        }
+    }
+}
+
+// menu
+.illustration {
+    img {
+        object-fit: cover;
+        width: 100vw;
+        height: 25vh;
+    }
+}
+
+.menu {
+    background-color: $color-grey;
+    border-radius: $card-radius;
+    .starters {
+        display: flex;
+        flex-direction: column;
+        h2 {
+            font-weight: normal;
+            font-size: smaller;
+            position: relative;
+            &::before {
+                content: "";
+                position: absolute;
+                bottom: -25%;
+                background-color: $color-tertiary;
+                height: 2px;
+                width: 35px;
+            }
+
+        }
+        .card-dish {
+            background-color: white;
+            border-radius: $card-radius;
+            margin-bottom: 20px;
+        }
+    }
+    .order-confirmation {
+        padding: 50px 0px;
+        button {
+        background: radial-gradient(ellipse at top left, $color-secondary, $color-primary);
+        color: white;
+        border: none;
+        border-radius: 30px;
+        padding: 15px 20px;
+        font-weight: bold;
         }
     }
 }
