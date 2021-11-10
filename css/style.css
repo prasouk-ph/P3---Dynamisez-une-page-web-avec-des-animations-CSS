@@ -173,20 +173,15 @@ footer i {
   position: absolute;
   right: 5%;
   bottom: 45%;
+  cursor: pointer;
 }
-.restaurant .card-content button:active {
-  color: white;
-}
-.restaurant .card-content button:active::before {
-  font-family: "Font Awesome 5 Free";
-  content: "\f004";
+.restaurant .card-content button:active .fa-heart {
   font-weight: 900;
   background: linear-gradient(to top, #FF79DA, #9356DC);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  position: relative;
-  right: -24px;
+  transition-duration: 0.5s;
 }
 .restaurant .card .label {
   background-color: #99E2D0;
