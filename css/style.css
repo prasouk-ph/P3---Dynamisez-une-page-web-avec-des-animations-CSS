@@ -232,6 +232,9 @@ footer i {
   padding: 0px 10px;
   position: relative;
 }
+.menu .starters .card-dish h3 {
+  font-size: medium;
+}
 .menu .starters .card-dish p:last-child {
   position: absolute;
   right: 5%;
