@@ -88,6 +88,7 @@ footer {
     nav {
         display: flex;
         flex-direction: column;
+        padding-left: 15px;
         button {
             background-color: $color-grey;
             padding: 10px 0px;
