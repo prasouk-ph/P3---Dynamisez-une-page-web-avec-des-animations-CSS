@@ -11,7 +11,7 @@ header {
   padding: 20px;
 }
 header img {
-  width: 50%;
+  width: 65%;
 }
 
 footer {
@@ -20,7 +20,7 @@ footer {
   padding: 20px;
 }
 footer img {
-  filter: invert(100%);
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(17deg) brightness(103%) contrast(105%);
   width: 80px;
 }
 footer ul {
@@ -148,31 +148,13 @@ footer i {
 .restaurant .card-content p {
   font-size: large;
 }
-.restaurant .card-content #heart {
-  opacity: 0;
-}
-.restaurant .card-content #heart + label {
-  font-size: 24px;
-  position: absolute;
-  right: 5%;
-  bottom: 45%;
-}
-.restaurant .card-content #heart:checked + label {
-  font-family: "Font Awesome 5 Free";
-  content: "\f004";
-  font-weight: 900;
-  background: linear-gradient(to top, #FF79DA, #9356DC);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
 .restaurant .card-content button {
   background-color: white;
   border: none;
-  font-size: 24px;
+  font-size: 30px;
   position: absolute;
   right: 5%;
-  bottom: 45%;
+  bottom: 30%;
   cursor: pointer;
 }
 .restaurant .card-content button:active .fa-heart {
