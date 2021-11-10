@@ -213,7 +213,9 @@ footer {
 .menu {
     background-color: $color-grey;
     border-radius: $card-radius;
+    
     header {
+        justify-content: flex-start;
         h1 {
             font-family: 'Shrikhand';
         }
@@ -226,6 +228,7 @@ footer {
     .starters {
         display: flex;
         flex-direction: column;
+        padding: $section-padding;
         h2 {
             font-weight: normal;
             font-size: smaller;
@@ -256,6 +259,7 @@ footer {
     }
     .order-confirmation {
         padding: 50px 0px;
+        text-align: center;
         button {
         background: radial-gradient(ellipse at top left, $color-secondary, $color-primary);
         color: white;

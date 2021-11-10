@@ -195,6 +195,9 @@ footer i {
   background-color: #F6F6F6;
   border-radius: 20px;
 }
+.menu header {
+  justify-content: flex-start;
+}
 .menu header h1 {
   font-family: "Shrikhand";
 }
@@ -206,6 +209,7 @@ footer i {
 .menu .starters {
   display: flex;
   flex-direction: column;
+  padding: 20px;
 }
 .menu .starters h2 {
   font-weight: normal;
@@ -236,6 +240,7 @@ footer i {
 }
 .menu .order-confirmation {
   padding: 50px 0px;
+  text-align: center;
 }
 .menu .order-confirmation button {
   background: radial-gradient(ellipse at top left, #FF79DA, #9356DC);
