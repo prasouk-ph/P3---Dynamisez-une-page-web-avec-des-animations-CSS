@@ -16,6 +16,42 @@ $card-radius: 20px;
     font-weight: bold;
 }
 
+@mixin menu-section-layout {
+    display: flex;
+    flex-direction: column;
+    padding: $section-padding;
+    h2 {
+        font-weight: normal;
+        font-size: smaller;
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: -25%;
+            background-color: $color-tertiary;
+            height: 2px;
+            width: 35px;
+        }
+    } 
+}
+
+@mixin menu-card-layout {
+    background-color: white;
+    border-radius: $card-radius;
+    margin-bottom: 20px;
+    line-height: 50%;
+    padding: 0px 10px;
+    position: relative;
+    h3 {
+        font-size: medium;
+    }
+    p:last-child {
+        position: absolute;
+        right: 5%;
+        bottom: 0%;
+        font-weight: bold;
+    }
+}
 
 
 * {
@@ -233,38 +269,21 @@ footer {
         }
     }
     .starters {
-        display: flex;
-        flex-direction: column;
-        padding: $section-padding;
-        h2 {
-            font-weight: normal;
-            font-size: smaller;
-            position: relative;
-            &::before {
-                content: "";
-                position: absolute;
-                bottom: -25%;
-                background-color: $color-tertiary;
-                height: 2px;
-                width: 35px;
-            }
-        }
+        @include menu-section-layout;
         .card-dish {
-            background-color: white;
-            border-radius: $card-radius;
-            margin-bottom: 20px;
-            line-height: 50%;
-            padding: 0px 10px;
-            position: relative;
-            h3 {
-                font-size: medium;
-            }
-            p:last-child {
-                position: absolute;
-                right: 5%;
-                bottom: 0%;
-                font-weight: bold;
-            }
+            @include menu-card-layout;
+        }
+    }
+    .main-courses {
+        @include menu-section-layout;
+        .card-dish {
+            @include menu-card-layout;
+        }
+    }
+    .desserts {
+        @include menu-section-layout;
+        .card-dish {
+            @include menu-card-layout;
         }
     }
     .order-confirmation {
@@ -275,3 +294,4 @@ footer {
         }
     }
 }
+

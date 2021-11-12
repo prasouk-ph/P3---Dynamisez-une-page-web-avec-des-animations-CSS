@@ -241,6 +241,76 @@ footer i {
   bottom: 0%;
   font-weight: bold;
 }
+.menu .main-courses {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+.menu .main-courses h2 {
+  font-weight: normal;
+  font-size: smaller;
+  position: relative;
+}
+.menu .main-courses h2::before {
+  content: "";
+  position: absolute;
+  bottom: -25%;
+  background-color: #99E2D0;
+  height: 2px;
+  width: 35px;
+}
+.menu .main-courses .card-dish {
+  background-color: white;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  line-height: 50%;
+  padding: 0px 10px;
+  position: relative;
+}
+.menu .main-courses .card-dish h3 {
+  font-size: medium;
+}
+.menu .main-courses .card-dish p:last-child {
+  position: absolute;
+  right: 5%;
+  bottom: 0%;
+  font-weight: bold;
+}
+.menu .desserts {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+.menu .desserts h2 {
+  font-weight: normal;
+  font-size: smaller;
+  position: relative;
+}
+.menu .desserts h2::before {
+  content: "";
+  position: absolute;
+  bottom: -25%;
+  background-color: #99E2D0;
+  height: 2px;
+  width: 35px;
+}
+.menu .desserts .card-dish {
+  background-color: white;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  line-height: 50%;
+  padding: 0px 10px;
+  position: relative;
+}
+.menu .desserts .card-dish h3 {
+  font-size: medium;
+}
+.menu .desserts .card-dish p:last-child {
+  position: absolute;
+  right: 5%;
+  bottom: 0%;
+  font-weight: bold;
+}
 .menu .order-confirmation {
   padding: 50px 0px;
   text-align: center;
