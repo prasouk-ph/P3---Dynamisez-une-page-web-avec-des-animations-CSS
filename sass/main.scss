@@ -17,6 +17,17 @@ $menu-section-list: starters main-courses desserts;
     font-weight: bold;
 }
 
+@mixin button-heart-filling {
+    &:active .fa-heart {
+        font-weight: 900;
+        background: linear-gradient(to top, $color-secondary, $color-primary);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transition-duration: 0.5s;
+    }
+}
+
 @mixin menu-section-layout {
     display: flex;
     flex-direction: column;
@@ -54,13 +65,16 @@ $menu-section-list: starters main-courses desserts;
     }
 }
 
-
 * {
     font-family: 'Roboto';
 }
 
 body {
     margin: auto;
+}
+
+button {
+    cursor: pointer;
 }
 
 // header
@@ -223,14 +237,7 @@ footer {
                 right: 5%;
                 bottom: 30%;
                 cursor: pointer;
-                &:active .fa-heart {
-                        font-weight: 900;
-                        background: linear-gradient(to top, $color-secondary, $color-primary);
-                        background-clip: text;
-                        -webkit-background-clip: text;
-                        -webkit-text-fill-color: transparent;
-                        transition-duration: 0.5s;
-                }
+                @include button-heart-filling;
             }
         }
         .label {
@@ -254,10 +261,15 @@ footer {
     }
 }
 
+// main {
+//     background-color: $color-grey;
+// }
+
 .menu {
     background-color: $color-grey;
-    border-radius: $card-radius;
-    
+    border-radius: 20px 20px 0 0;
+    position: relative;
+    top: -20px;
     header {
         justify-content: flex-start;
         h1 {
@@ -267,6 +279,7 @@ footer {
             right: 3%;
             left: auto;
             background-color: inherit;
+            @include button-heart-filling;
         }
     }
     @each $class in $menu-section-list {
