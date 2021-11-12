@@ -150,6 +150,16 @@ footer i {
   height: 30vh;
   min-height: 250px;
 }
+.restaurant .card .full-click {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  opacity: 0;
+}
 .restaurant .card-content {
   background-color: white;
   border-radius: 0 0 20px 20px;
@@ -170,6 +180,7 @@ footer i {
   right: 5%;
   bottom: 30%;
   cursor: pointer;
+  z-index: 2;
 }
 .restaurant .card-content button:active .fa-heart {
   font-weight: 900;
@@ -189,30 +200,32 @@ footer i {
   padding: 10px 15px;
 }
 
-.illustration img {
+main header {
+  padding: 0 20px;
+}
+main .illustration img {
   object-fit: cover;
   width: 100vw;
   height: 25vh;
 }
-
-.menu {
+main .menu {
   background-color: #F6F6F6;
   border-radius: 20px 20px 0 0;
   position: relative;
   top: -20px;
 }
-.menu header {
+main .menu header {
   justify-content: flex-start;
 }
-.menu header h1 {
+main .menu header h1 {
   font-family: "Shrikhand";
 }
-.menu header button {
+main .menu header button {
   right: 3%;
   left: auto;
   background-color: inherit;
 }
-.menu header button:active .fa-heart {
+main .menu header button:active .fa-heart {
   font-weight: 900;
   background: linear-gradient(to top, #FF79DA, #9356DC);
   background-clip: text;
@@ -220,17 +233,18 @@ footer i {
   -webkit-text-fill-color: transparent;
   transition-duration: 0.5s;
 }
-.menu .starters {
+main .menu .starters {
   display: flex;
   flex-direction: column;
   padding: 20px;
 }
-.menu .starters h2 {
+main .menu .starters h2 {
   font-weight: normal;
   font-size: smaller;
   position: relative;
+  margin-bottom: 20px;
 }
-.menu .starters h2::before {
+main .menu .starters h2::before {
   content: "";
   position: absolute;
   bottom: -25%;
@@ -238,7 +252,7 @@ footer i {
   height: 2px;
   width: 35px;
 }
-.menu .card-dish {
+main .menu .card-dish {
   background-color: white;
   border-radius: 20px;
   margin-bottom: 20px;
@@ -246,26 +260,37 @@ footer i {
   padding: 0px 10px;
   position: relative;
 }
-.menu .card-dish h3 {
+main .menu .card-dish h3 {
   font-size: medium;
 }
-.menu .card-dish p:last-child {
+main .menu .card-dish p:last-child {
   position: absolute;
   right: 5%;
   bottom: 0%;
   font-weight: bold;
 }
-.menu .main-courses {
+main .menu .card-dish .full-click {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  opacity: 0;
+}
+main .menu .main-courses {
   display: flex;
   flex-direction: column;
   padding: 20px;
 }
-.menu .main-courses h2 {
+main .menu .main-courses h2 {
   font-weight: normal;
   font-size: smaller;
   position: relative;
+  margin-bottom: 20px;
 }
-.menu .main-courses h2::before {
+main .menu .main-courses h2::before {
   content: "";
   position: absolute;
   bottom: -25%;
@@ -273,7 +298,7 @@ footer i {
   height: 2px;
   width: 35px;
 }
-.menu .card-dish {
+main .menu .card-dish {
   background-color: white;
   border-radius: 20px;
   margin-bottom: 20px;
@@ -281,26 +306,37 @@ footer i {
   padding: 0px 10px;
   position: relative;
 }
-.menu .card-dish h3 {
+main .menu .card-dish h3 {
   font-size: medium;
 }
-.menu .card-dish p:last-child {
+main .menu .card-dish p:last-child {
   position: absolute;
   right: 5%;
   bottom: 0%;
   font-weight: bold;
 }
-.menu .desserts {
+main .menu .card-dish .full-click {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  opacity: 0;
+}
+main .menu .desserts {
   display: flex;
   flex-direction: column;
   padding: 20px;
 }
-.menu .desserts h2 {
+main .menu .desserts h2 {
   font-weight: normal;
   font-size: smaller;
   position: relative;
+  margin-bottom: 20px;
 }
-.menu .desserts h2::before {
+main .menu .desserts h2::before {
   content: "";
   position: absolute;
   bottom: -25%;
@@ -308,7 +344,7 @@ footer i {
   height: 2px;
   width: 35px;
 }
-.menu .card-dish {
+main .menu .card-dish {
   background-color: white;
   border-radius: 20px;
   margin-bottom: 20px;
@@ -316,20 +352,30 @@ footer i {
   padding: 0px 10px;
   position: relative;
 }
-.menu .card-dish h3 {
+main .menu .card-dish h3 {
   font-size: medium;
 }
-.menu .card-dish p:last-child {
+main .menu .card-dish p:last-child {
   position: absolute;
   right: 5%;
   bottom: 0%;
   font-weight: bold;
 }
-.menu .order-confirmation {
+main .menu .card-dish .full-click {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  opacity: 0;
+}
+main .menu .order-confirmation {
   padding: 50px 0px;
   text-align: center;
 }
-.menu .order-confirmation button {
+main .menu .order-confirmation button {
   background: radial-gradient(ellipse at top left, #FF79DA, #9356DC);
   color: white;
   border: none;

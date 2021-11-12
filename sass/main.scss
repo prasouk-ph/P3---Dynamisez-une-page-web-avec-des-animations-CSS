@@ -4,6 +4,7 @@ $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
 $color-grey: #F6F6F6;
 $section-padding: 20px;
+$card-padding: 20px;
 $card-radius: 20px;
 $menu-section-list: starters main-courses desserts;
 
@@ -36,6 +37,7 @@ $menu-section-list: starters main-courses desserts;
         font-weight: normal;
         font-size: smaller;
         position: relative;
+        margin-bottom: $card-padding;
         &::before {
             content: "";
             position: absolute;
@@ -62,6 +64,19 @@ $menu-section-list: starters main-courses desserts;
         right: 5%;
         bottom: 0%;
         font-weight: bold;
+    }
+}
+
+@mixin card-clickable {
+    .full-click {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+        opacity: 0;
     }
 }
 
@@ -218,6 +233,7 @@ footer {
     position: relative;
     height: 30vh;
     min-height: 250px;
+    @include card-clickable;
         &-content {
             background-color: white;
             border-radius: 0 0 20px 20px;
@@ -238,6 +254,7 @@ footer {
                 bottom: 30%;
                 cursor: pointer;
                 @include button-heart-filling;
+                z-index: 2;
             }
         }
         .label {
@@ -253,48 +270,54 @@ footer {
 }
 
 // menu
-.illustration {
-    img {
-        object-fit: cover;
-        width: 100vw;
-        height: 25vh;
-    }
-}
-
-// main {
-//     background-color: $color-grey;
-// }
-
-.menu {
-    background-color: $color-grey;
-    border-radius: 20px 20px 0 0;
-    position: relative;
-    top: -20px;
+main {
     header {
-        justify-content: flex-start;
-        h1 {
-            font-family: 'Shrikhand';
-        }
-        button {
-            right: 3%;
-            left: auto;
-            background-color: inherit;
-            @include button-heart-filling;
+        padding: 0 20px;
+    }
+    .illustration {
+        img {
+            object-fit: cover;
+            width: 100vw;
+            height: 25vh;
         }
     }
-    @each $class in $menu-section-list {
-        .#{$class} {
-            @include menu-section-layout;
+
+    // main {
+    //     background-color: $color-grey;
+    // }
+
+    .menu {
+        background-color: $color-grey;
+        border-radius: 20px 20px 0 0;
+        position: relative;
+        top: -20px;
+        header {
+            justify-content: flex-start;
+            h1 {
+                font-family: 'Shrikhand';
+            }
+            button {
+                right: 3%;
+                left: auto;
+                background-color: inherit;
+                @include button-heart-filling;
+            }
         }
-        .#{card-dish} {
-            @include menu-card-layout;
+        @each $class in $menu-section-list {
+            .#{$class} {
+                @include menu-section-layout;
+            }
+            .#{card-dish} {
+                @include menu-card-layout;
+                @include card-clickable;
+            }
         }
-    }
-    .order-confirmation {
-        padding: 50px 0px;
-        text-align: center;
-        button {
-        @include button-round;
+        .order-confirmation {
+            padding: 50px 0px;
+            text-align: center;
+            button {
+            @include button-round;
+            }
         }
     }
 }
