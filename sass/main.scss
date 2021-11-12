@@ -5,6 +5,7 @@ $color-tertiary: #99E2D0;
 $color-grey: #F6F6F6;
 $section-padding: 20px;
 $card-radius: 20px;
+$menu-section-list: starters main-courses desserts;
 
 // mixin
 @mixin button-round {
@@ -268,21 +269,11 @@ footer {
             background-color: inherit;
         }
     }
-    .starters {
-        @include menu-section-layout;
-        .card-dish {
-            @include menu-card-layout;
+    @each $class in $menu-section-list {
+        .#{$class} {
+            @include menu-section-layout;
         }
-    }
-    .main-courses {
-        @include menu-section-layout;
-        .card-dish {
-            @include menu-card-layout;
-        }
-    }
-    .desserts {
-        @include menu-section-layout;
-        .card-dish {
+        .#{card-dish} {
             @include menu-card-layout;
         }
     }
@@ -294,4 +285,8 @@ footer {
         }
     }
 }
+
+
+
+
 

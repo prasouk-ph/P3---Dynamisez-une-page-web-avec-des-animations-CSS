@@ -224,7 +224,7 @@ footer i {
   height: 2px;
   width: 35px;
 }
-.menu .starters .card-dish {
+.menu .card-dish {
   background-color: white;
   border-radius: 20px;
   margin-bottom: 20px;
@@ -232,10 +232,10 @@ footer i {
   padding: 0px 10px;
   position: relative;
 }
-.menu .starters .card-dish h3 {
+.menu .card-dish h3 {
   font-size: medium;
 }
-.menu .starters .card-dish p:last-child {
+.menu .card-dish p:last-child {
   position: absolute;
   right: 5%;
   bottom: 0%;
@@ -259,7 +259,7 @@ footer i {
   height: 2px;
   width: 35px;
 }
-.menu .main-courses .card-dish {
+.menu .card-dish {
   background-color: white;
   border-radius: 20px;
   margin-bottom: 20px;
@@ -267,10 +267,10 @@ footer i {
   padding: 0px 10px;
   position: relative;
 }
-.menu .main-courses .card-dish h3 {
+.menu .card-dish h3 {
   font-size: medium;
 }
-.menu .main-courses .card-dish p:last-child {
+.menu .card-dish p:last-child {
   position: absolute;
   right: 5%;
   bottom: 0%;
@@ -294,7 +294,7 @@ footer i {
   height: 2px;
   width: 35px;
 }
-.menu .desserts .card-dish {
+.menu .card-dish {
   background-color: white;
   border-radius: 20px;
   margin-bottom: 20px;
@@ -302,10 +302,10 @@ footer i {
   padding: 0px 10px;
   position: relative;
 }
-.menu .desserts .card-dish h3 {
+.menu .card-dish h3 {
   font-size: medium;
 }
-.menu .desserts .card-dish p:last-child {
+.menu .card-dish p:last-child {
   position: absolute;
   right: 5%;
   bottom: 0%;
