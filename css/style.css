@@ -182,13 +182,27 @@ footer i {
   cursor: pointer;
   z-index: 2;
 }
-.restaurant .card-content button:active .fa-heart {
+.restaurant .card-content button::after {
+  font-family: "Font Awesome 5 Free";
+  content: "\f004";
+  font-weight: 400;
+  position: absolute;
+  top: 5%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  transition: opacity 0.5s;
+  transition-timing-function: ease-in-out;
+  font-size: 32px;
+}
+.restaurant .card-content button:active::after {
   font-weight: 900;
   background: linear-gradient(to top, #FF79DA, #9356DC);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  transition-duration: 0.5s;
+  opacity: 1;
 }
 .restaurant .card .label {
   background-color: #99E2D0;
@@ -221,17 +235,32 @@ main .menu header h1 {
   font-family: "Shrikhand";
 }
 main .menu header button {
-  right: 3%;
+  right: 4%;
   left: auto;
   background-color: inherit;
+  font-size: 30px;
 }
-main .menu header button:active .fa-heart {
+main .menu header button::after {
+  font-family: "Font Awesome 5 Free";
+  content: "\f004";
+  font-weight: 400;
+  position: absolute;
+  top: 5%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  transition: opacity 0.5s;
+  transition-timing-function: ease-in-out;
+  font-size: 32px;
+}
+main .menu header button:active::after {
   font-weight: 900;
   background: linear-gradient(to top, #FF79DA, #9356DC);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  transition-duration: 0.5s;
+  opacity: 1;
 }
 main .menu .starters {
   display: flex;
