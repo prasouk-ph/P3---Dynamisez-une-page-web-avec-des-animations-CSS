@@ -150,6 +150,44 @@ footer {
     }
 }
 
+// main
+// loader
+main {
+    &::before {
+        content: "";
+        background-color: black;
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 5;
+        opacity: 0.5;
+        // to make the entire screen dark
+    }
+    &::after {
+        content: "";
+        cursor: wait;
+        position: fixed;
+        top: 50%;
+        bottom: 50%;
+        left: 50%;
+        right: 50%;
+        z-index: 6;
+        border: 5px solid $color-primary;
+        border-top: 5px solid $color-secondary;
+        border-radius: 50%;
+        padding: 30px;
+        animation: loading 1s ease infinite;
+    }
+}
+
+@keyframes loading {
+    to {
+        transform: rotate(1turn);
+    }
+}
+
 // localisation
 .localisation {
     background-color: darken($color: $color-grey, $amount: 5%);
