@@ -60,7 +60,6 @@ main::before {
   left: 0;
   bottom: 0;
   right: 0;
-  z-index: 5;
   opacity: 0;
 }
 main::after {
@@ -71,7 +70,6 @@ main::after {
   bottom: 50%;
   left: 50%;
   right: 50%;
-  z-index: 6;
   border: 5px solid #9356DC;
   border-top: 5px solid #FF79DA;
   border-radius: 50%;
@@ -125,7 +123,6 @@ main::after {
 
 .functioning {
   padding: 20px;
-  animation: appear 3s;
 }
 .functioning nav {
   display: flex;
@@ -328,18 +325,30 @@ main .menu .card-dish {
   background-color: white;
   border-radius: 20px;
   margin-bottom: 20px;
-  line-height: 50%;
-  padding: 0px 10px;
+  line-height: 80%;
+  padding: 0 50px 0 10px;
+  position: relative;
   position: relative;
 }
 main .menu .card-dish h3 {
   font-size: medium;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  transition: 1s;
+}
+main .menu .card-dish p {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  transition: 1s;
 }
 main .menu .card-dish p:last-child {
   position: absolute;
   right: 5%;
   bottom: 0%;
   font-weight: bold;
+  transition: 1s;
 }
 main .menu .card-dish .full-click {
   display: block;
@@ -350,6 +359,36 @@ main .menu .card-dish .full-click {
   bottom: 0;
   z-index: 1;
   opacity: 0;
+}
+main .menu .card-dish::after {
+  font-family: "Font Awesome 5 Free";
+  content: "\f058";
+  font-weight: 900;
+  color: white;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 0;
+  overflow: hidden;
+  border-radius: 0 10px 10px 0;
+  background-color: #99E2D0;
+  transition: 1s;
+  transform: rotate(1turn);
+  text-align: center;
+  vertical-align: middle;
+}
+main .menu .card-dish:hover::after {
+  width: 50px;
+}
+main .menu .card-dish:hover {
+  padding-right: 50px;
+}
+main .menu .card-dish:hover > p {
+  padding-right: 50px;
+}
+main .menu .card-dish:hover > h3 {
+  padding-right: 50px;
 }
 main .menu .main-courses {
   opacity: 0;
@@ -376,18 +415,30 @@ main .menu .card-dish {
   background-color: white;
   border-radius: 20px;
   margin-bottom: 20px;
-  line-height: 50%;
-  padding: 0px 10px;
+  line-height: 80%;
+  padding: 0 50px 0 10px;
+  position: relative;
   position: relative;
 }
 main .menu .card-dish h3 {
   font-size: medium;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  transition: 1s;
+}
+main .menu .card-dish p {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  transition: 1s;
 }
 main .menu .card-dish p:last-child {
   position: absolute;
   right: 5%;
   bottom: 0%;
   font-weight: bold;
+  transition: 1s;
 }
 main .menu .card-dish .full-click {
   display: block;
@@ -398,6 +449,36 @@ main .menu .card-dish .full-click {
   bottom: 0;
   z-index: 1;
   opacity: 0;
+}
+main .menu .card-dish::after {
+  font-family: "Font Awesome 5 Free";
+  content: "\f058";
+  font-weight: 900;
+  color: white;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 0;
+  overflow: hidden;
+  border-radius: 0 10px 10px 0;
+  background-color: #99E2D0;
+  transition: 1s;
+  transform: rotate(1turn);
+  text-align: center;
+  vertical-align: middle;
+}
+main .menu .card-dish:hover::after {
+  width: 50px;
+}
+main .menu .card-dish:hover {
+  padding-right: 50px;
+}
+main .menu .card-dish:hover > p {
+  padding-right: 50px;
+}
+main .menu .card-dish:hover > h3 {
+  padding-right: 50px;
 }
 main .menu .desserts {
   opacity: 0;
@@ -424,18 +505,30 @@ main .menu .card-dish {
   background-color: white;
   border-radius: 20px;
   margin-bottom: 20px;
-  line-height: 50%;
-  padding: 0px 10px;
+  line-height: 80%;
+  padding: 0 50px 0 10px;
+  position: relative;
   position: relative;
 }
 main .menu .card-dish h3 {
   font-size: medium;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  transition: 1s;
+}
+main .menu .card-dish p {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  transition: 1s;
 }
 main .menu .card-dish p:last-child {
   position: absolute;
   right: 5%;
   bottom: 0%;
   font-weight: bold;
+  transition: 1s;
 }
 main .menu .card-dish .full-click {
   display: block;
@@ -446,6 +539,36 @@ main .menu .card-dish .full-click {
   bottom: 0;
   z-index: 1;
   opacity: 0;
+}
+main .menu .card-dish::after {
+  font-family: "Font Awesome 5 Free";
+  content: "\f058";
+  font-weight: 900;
+  color: white;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 0;
+  overflow: hidden;
+  border-radius: 0 10px 10px 0;
+  background-color: #99E2D0;
+  transition: 1s;
+  transform: rotate(1turn);
+  text-align: center;
+  vertical-align: middle;
+}
+main .menu .card-dish:hover::after {
+  width: 50px;
+}
+main .menu .card-dish:hover {
+  padding-right: 50px;
+}
+main .menu .card-dish:hover > p {
+  padding-right: 50px;
+}
+main .menu .card-dish:hover > h3 {
+  padding-right: 50px;
 }
 main .menu .order-confirmation {
   padding: 50px 0px;

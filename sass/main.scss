@@ -67,17 +67,28 @@ $menu-section-list: starters main-courses desserts;
     background-color: white;
     border-radius: $card-radius;
     margin-bottom: 20px;
-    line-height: 50%;
-    padding: 0px 10px;
+    line-height: 80%;
+    padding: 0 50px 0 10px;
     position: relative;
     h3 {
         font-size: medium;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        transition: 1s;
+    }
+    p {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        transition: 1s;
     }
     p:last-child {
         position: absolute;
         right: 5%;
         bottom: 0%;
         font-weight: bold;
+        transition: 1s;
     }
 }
 
@@ -161,7 +172,7 @@ main {
         left: 0;
         bottom: 0;
         right: 0;
-        z-index: 5;
+        // z-index: 5;
         opacity: 0;
         // to make the entire screen dark
         // animation: appear 1s;
@@ -174,7 +185,7 @@ main {
         bottom: 50%;
         left: 50%;
         right: 50%;
-        z-index: 6;
+        // z-index: 6;
         border: 5px solid $color-primary;
         border-top: 5px solid $color-secondary;
         border-radius: 50%;
@@ -230,7 +241,6 @@ main {
 // functioning
 .functioning {
     padding: $section-padding;
-    animation: appear 3s;
     nav {
         display: flex;
         flex-direction: column;
@@ -376,6 +386,41 @@ main {
             .#{card-dish} {
                 @include menu-card-layout;
                 @include card-clickable;
+                position: relative;
+                &::after {
+                    font-family: "Font Awesome 5 Free";
+                    content: "\f058";
+                    font-weight: 900;
+                    color: white;
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    bottom: 0;
+                    width: 0;
+                    overflow: hidden;
+                    border-radius: 0 10px 10px 0;
+                    background-color: $color-tertiary;
+                    transition: 1s;
+                    transform: rotate(1turn);
+                    text-align: center;
+                    vertical-align: middle;
+                    
+                }
+                &:hover::after {
+                    width: 50px;
+                }
+                &:hover {
+                    padding-right: 50px;
+                    & > p {
+                        padding-right: 50px;
+                    }
+                    & > h3 {
+                        padding-right: 50px;
+                    }
+                }
+                // &:hover p {
+                //     padding-right: 50px;
+                // }
             }
         }
         .order-confirmation {
