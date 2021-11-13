@@ -61,7 +61,7 @@ main::before {
   bottom: 0;
   right: 0;
   z-index: 5;
-  opacity: 0.5;
+  opacity: 0;
 }
 main::after {
   content: "";
@@ -76,12 +76,20 @@ main::after {
   border-top: 5px solid #FF79DA;
   border-radius: 50%;
   padding: 30px;
-  animation: loading 1s ease infinite;
+  animation: loading 1s ease 3;
 }
 
 @keyframes loading {
   to {
     transform: rotate(1turn);
+  }
+}
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 .localisation {
@@ -117,6 +125,7 @@ main::after {
 
 .functioning {
   padding: 20px;
+  animation: appear 3s;
 }
 .functioning nav {
   display: flex;
@@ -295,6 +304,8 @@ main .menu header button:active::after {
   opacity: 1;
 }
 main .menu .starters {
+  opacity: 0;
+  animation: appear 3s forwards;
   display: flex;
   flex-direction: column;
   padding: 20px;
@@ -341,6 +352,8 @@ main .menu .card-dish .full-click {
   opacity: 0;
 }
 main .menu .main-courses {
+  opacity: 0;
+  animation: appear 3s forwards;
   display: flex;
   flex-direction: column;
   padding: 20px;
@@ -387,6 +400,8 @@ main .menu .card-dish .full-click {
   opacity: 0;
 }
 main .menu .desserts {
+  opacity: 0;
+  animation: appear 3s forwards;
   display: flex;
   flex-direction: column;
   padding: 20px;

@@ -162,8 +162,9 @@ main {
         bottom: 0;
         right: 0;
         z-index: 5;
-        opacity: 0.5;
+        opacity: 0;
         // to make the entire screen dark
+        // animation: appear 1s;
     }
     &::after {
         content: "";
@@ -178,13 +179,22 @@ main {
         border-top: 5px solid $color-secondary;
         border-radius: 50%;
         padding: 30px;
-        animation: loading 1s ease infinite;
+        animation: loading 1s ease 3;
     }
 }
 
 @keyframes loading {
     to {
         transform: rotate(1turn);
+    }
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
     }
 }
 
@@ -220,6 +230,7 @@ main {
 // functioning
 .functioning {
     padding: $section-padding;
+    animation: appear 3s;
     nav {
         display: flex;
         flex-direction: column;
@@ -358,6 +369,8 @@ main {
         }
         @each $class in $menu-section-list {
             .#{$class} {
+                opacity: 0;
+                animation: appear 3s forwards;
                 @include menu-section-layout;
             }
             .#{card-dish} {
