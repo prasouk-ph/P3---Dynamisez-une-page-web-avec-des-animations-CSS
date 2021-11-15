@@ -146,7 +146,6 @@ footer i {
   .functioning nav {
     flex-direction: row;
     justify-content: space-between;
-    padding-left: 0;
   }
 }
 .functioning nav button {
@@ -320,8 +319,18 @@ main .menu {
   position: relative;
   top: -20px;
 }
+@media (min-width: 768px) {
+  main .menu {
+    text-align: center;
+  }
+}
 main .menu header {
   justify-content: flex-start;
+}
+@media (min-width: 768px) {
+  main .menu header {
+    justify-content: center;
+  }
 }
 main .menu header h1 {
   font-family: "Shrikhand";
@@ -354,18 +363,24 @@ main .menu header button:active::after {
   -webkit-text-fill-color: transparent;
   opacity: 1;
 }
-main .menu .starters {
+@media (min-width: 992px) {
+  main .menu .menu-container {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+main .menu .menu-container .starters {
   display: flex;
   flex-direction: column;
   padding: 20px;
 }
-main .menu .starters h2 {
+main .menu .menu-container .starters h2 {
   font-weight: normal;
   font-size: smaller;
   position: relative;
   margin-bottom: 20px;
 }
-main .menu .starters h2::before {
+main .menu .menu-container .starters h2::before {
   content: "";
   position: absolute;
   bottom: -25%;
@@ -373,7 +388,7 @@ main .menu .starters h2::before {
   height: 2px;
   width: 35px;
 }
-main .menu .card-dish {
+main .menu .menu-container .card-dish {
   background-color: white;
   border-radius: 20px;
   margin-bottom: 20px;
@@ -381,7 +396,12 @@ main .menu .card-dish {
   position: relative;
   position: relative;
 }
-main .menu .card-dish h3, main .menu .card-dish p {
+@media (min-width: 992px) {
+  main .menu .menu-container .card-dish {
+    padding: 0;
+  }
+}
+main .menu .menu-container .card-dish h3, main .menu .menu-container .card-dish p {
   font-size: medium;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -389,14 +409,20 @@ main .menu .card-dish h3, main .menu .card-dish p {
   transition: 1s;
   margin: 8px;
 }
-main .menu .card-dish p:last-child {
+main .menu .menu-container .card-dish p:last-child {
   position: absolute;
   right: 5%;
   bottom: 0%;
   font-weight: bold;
   transition: 1s;
 }
-main .menu .card-dish .full-click {
+@media (min-width: 992px) {
+  main .menu .menu-container .card-dish p:last-child {
+    position: relative;
+    right: 0;
+  }
+}
+main .menu .menu-container .card-dish .full-click {
   display: block;
   position: absolute;
   top: 0;
@@ -406,7 +432,7 @@ main .menu .card-dish .full-click {
   z-index: 1;
   opacity: 0;
 }
-main .menu .card-dish::after {
+main .menu .menu-container .card-dish::after {
   font-family: "Font Awesome 5 Free";
   content: "\f058";
   font-weight: 900;
@@ -424,24 +450,24 @@ main .menu .card-dish::after {
   text-align: center;
   vertical-align: middle;
 }
-main .menu .card-dish:hover::after {
+main .menu .menu-container .card-dish:hover::after {
   width: 50px;
 }
-main .menu .card-dish:hover, main .menu .card-dish:hover p, main .menu .card-dish:hover h3 {
+main .menu .menu-container .card-dish:hover, main .menu .menu-container .card-dish:hover p, main .menu .menu-container .card-dish:hover h3 {
   padding-right: 50px;
 }
-main .menu .main-courses {
+main .menu .menu-container .main-courses {
   display: flex;
   flex-direction: column;
   padding: 20px;
 }
-main .menu .main-courses h2 {
+main .menu .menu-container .main-courses h2 {
   font-weight: normal;
   font-size: smaller;
   position: relative;
   margin-bottom: 20px;
 }
-main .menu .main-courses h2::before {
+main .menu .menu-container .main-courses h2::before {
   content: "";
   position: absolute;
   bottom: -25%;
@@ -449,7 +475,7 @@ main .menu .main-courses h2::before {
   height: 2px;
   width: 35px;
 }
-main .menu .card-dish {
+main .menu .menu-container .card-dish {
   background-color: white;
   border-radius: 20px;
   margin-bottom: 20px;
@@ -457,7 +483,12 @@ main .menu .card-dish {
   position: relative;
   position: relative;
 }
-main .menu .card-dish h3, main .menu .card-dish p {
+@media (min-width: 992px) {
+  main .menu .menu-container .card-dish {
+    padding: 0;
+  }
+}
+main .menu .menu-container .card-dish h3, main .menu .menu-container .card-dish p {
   font-size: medium;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -465,14 +496,20 @@ main .menu .card-dish h3, main .menu .card-dish p {
   transition: 1s;
   margin: 8px;
 }
-main .menu .card-dish p:last-child {
+main .menu .menu-container .card-dish p:last-child {
   position: absolute;
   right: 5%;
   bottom: 0%;
   font-weight: bold;
   transition: 1s;
 }
-main .menu .card-dish .full-click {
+@media (min-width: 992px) {
+  main .menu .menu-container .card-dish p:last-child {
+    position: relative;
+    right: 0;
+  }
+}
+main .menu .menu-container .card-dish .full-click {
   display: block;
   position: absolute;
   top: 0;
@@ -482,7 +519,7 @@ main .menu .card-dish .full-click {
   z-index: 1;
   opacity: 0;
 }
-main .menu .card-dish::after {
+main .menu .menu-container .card-dish::after {
   font-family: "Font Awesome 5 Free";
   content: "\f058";
   font-weight: 900;
@@ -500,24 +537,24 @@ main .menu .card-dish::after {
   text-align: center;
   vertical-align: middle;
 }
-main .menu .card-dish:hover::after {
+main .menu .menu-container .card-dish:hover::after {
   width: 50px;
 }
-main .menu .card-dish:hover, main .menu .card-dish:hover p, main .menu .card-dish:hover h3 {
+main .menu .menu-container .card-dish:hover, main .menu .menu-container .card-dish:hover p, main .menu .menu-container .card-dish:hover h3 {
   padding-right: 50px;
 }
-main .menu .desserts {
+main .menu .menu-container .desserts {
   display: flex;
   flex-direction: column;
   padding: 20px;
 }
-main .menu .desserts h2 {
+main .menu .menu-container .desserts h2 {
   font-weight: normal;
   font-size: smaller;
   position: relative;
   margin-bottom: 20px;
 }
-main .menu .desserts h2::before {
+main .menu .menu-container .desserts h2::before {
   content: "";
   position: absolute;
   bottom: -25%;
@@ -525,7 +562,7 @@ main .menu .desserts h2::before {
   height: 2px;
   width: 35px;
 }
-main .menu .card-dish {
+main .menu .menu-container .card-dish {
   background-color: white;
   border-radius: 20px;
   margin-bottom: 20px;
@@ -533,7 +570,12 @@ main .menu .card-dish {
   position: relative;
   position: relative;
 }
-main .menu .card-dish h3, main .menu .card-dish p {
+@media (min-width: 992px) {
+  main .menu .menu-container .card-dish {
+    padding: 0;
+  }
+}
+main .menu .menu-container .card-dish h3, main .menu .menu-container .card-dish p {
   font-size: medium;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -541,14 +583,20 @@ main .menu .card-dish h3, main .menu .card-dish p {
   transition: 1s;
   margin: 8px;
 }
-main .menu .card-dish p:last-child {
+main .menu .menu-container .card-dish p:last-child {
   position: absolute;
   right: 5%;
   bottom: 0%;
   font-weight: bold;
   transition: 1s;
 }
-main .menu .card-dish .full-click {
+@media (min-width: 992px) {
+  main .menu .menu-container .card-dish p:last-child {
+    position: relative;
+    right: 0;
+  }
+}
+main .menu .menu-container .card-dish .full-click {
   display: block;
   position: absolute;
   top: 0;
@@ -558,7 +606,7 @@ main .menu .card-dish .full-click {
   z-index: 1;
   opacity: 0;
 }
-main .menu .card-dish::after {
+main .menu .menu-container .card-dish::after {
   font-family: "Font Awesome 5 Free";
   content: "\f058";
   font-weight: 900;
@@ -576,14 +624,14 @@ main .menu .card-dish::after {
   text-align: center;
   vertical-align: middle;
 }
-main .menu .card-dish:hover::after {
+main .menu .menu-container .card-dish:hover::after {
   width: 50px;
 }
-main .menu .card-dish:hover, main .menu .card-dish:hover p, main .menu .card-dish:hover h3 {
+main .menu .menu-container .card-dish:hover, main .menu .menu-container .card-dish:hover p, main .menu .menu-container .card-dish:hover h3 {
   padding-right: 50px;
 }
 main .menu .order-confirmation {
-  padding: 50px 0px;
+  padding: 50px 20px;
   text-align: center;
 }
 main .menu .order-confirmation button {
@@ -593,4 +641,9 @@ main .menu .order-confirmation button {
   border-radius: 30px;
   padding: 15px 20px;
   font-weight: bold;
+}
+@media (min-width: 768px) {
+  main .menu .order-confirmation button {
+    width: 100%;
+  }
 }
