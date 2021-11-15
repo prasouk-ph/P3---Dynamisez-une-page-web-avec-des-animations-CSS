@@ -65,6 +65,10 @@ footer ul {
 footer li {
   padding: 5px 0;
 }
+footer li a {
+  color: white;
+  text-decoration: none;
+}
 footer i {
   padding-right: 10px;
   width: 10px;
