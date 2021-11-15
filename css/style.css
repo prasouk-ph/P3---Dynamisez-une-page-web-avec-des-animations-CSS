@@ -146,6 +146,7 @@ footer i {
   .functioning nav {
     flex-direction: row;
     justify-content: space-between;
+    padding-left: 0;
   }
 }
 .functioning nav button {

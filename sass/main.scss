@@ -273,7 +273,6 @@ footer {
 // functioning
 .functioning {
     padding: $section-padding;
-    
     nav {
         display: flex;
         flex-direction: column;
@@ -281,6 +280,7 @@ footer {
         @media (min-width: 768px) {
             flex-direction: row;
             justify-content: space-between;
+            padding-left: 0;
         }
         button {
             background-color: $color-grey;
