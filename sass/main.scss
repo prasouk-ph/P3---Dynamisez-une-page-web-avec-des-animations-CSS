@@ -71,6 +71,7 @@ $menu-section-list: starters main-courses desserts;
     position: relative;
     @media (min-width: 992px) {
         padding: 0;
+        width: 29vw;
     }
     h3, p {
         font-size: medium;
