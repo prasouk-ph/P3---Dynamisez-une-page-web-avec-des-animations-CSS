@@ -294,6 +294,9 @@ footer {
             flex-direction: row;
             justify-content: space-between;
         }
+        @media (min-width: 992px) {
+            padding-left: 0;
+        }
         button {
             background-color: $color-grey;
             padding: 10px 0px;
