@@ -75,7 +75,8 @@ $menu-section-list: starters main-courses desserts;
         overflow: hidden;
         white-space: nowrap;
         transition: 1s;
-        margin: 8px;
+        // to prevent overflow-y being hidden if using line-height property
+        margin: 8px; 
     }
     p:last-child {
         position: absolute;
@@ -120,6 +121,7 @@ header {
     position: relative;
     img {
         width: 65%;
+        max-width: 600px;
     }
     button {
         font-size: 24px;
@@ -135,14 +137,26 @@ footer {
     background-color: #353535;
     color: white;
     padding: $section-padding;
+    @media (min-width: 768px) {
+        display: flex;
+        justify-content: space-between;
+    }
     img {
     filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(17deg) brightness(103%) contrast(105%);
     width: 80px;
+    @media (min-width: 768px) {
+        order: 0;
+        width: 300px;
+    }
     }
     ul {
     list-style: none;
     padding-left: 0;
     margin: 0;
+    @media (min-width: 768px) {
+        order: 1;
+        margin-right: 50px;
+    }
     }
     li {
     padding: 5px 0;
@@ -157,49 +171,73 @@ footer {
 
 // main
 // loader
-main {
-    &::before {
-        content: "";
-        background-color: black;
-        position: fixed;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        // z-index: 5;
-        opacity: 0;
-        // to make the entire screen dark
-        // animation: appear 1s;
-    }
-    &::after {
-        content: "";
-        cursor: wait;
-        position: fixed;
-        top: 50%;
-        bottom: 50%;
-        left: 50%;
-        right: 50%;
-        // z-index: 6;
-        border: 5px solid $color-primary;
-        border-top: 5px solid $color-secondary;
-        border-radius: 50%;
-        padding: 30px;
-        animation: loading 1s ease 3;
-    }
-}
+// main {
+//     // opacity: 0;
+//     // animation: disappear 6s forwards;
+//     &::before {
+//         content: "";
+//         background-color: black;
+//         position: fixed;
+//         top: 0;
+//         left: 0;
+//         bottom: 0;
+//         right: 0;
+//         z-index: 5;
+//         opacity: 0;
+//         // to make the entire screen dark
+//         animation: loader-background 8s;
+//     }
+//     &::after {
+//         content: "";
+//         cursor: wait;
+//         position: fixed;
+//         top: 50%;
+//         bottom: 50%;
+//         left: 50%;
+//         right: 50%;
+//         z-index: 6;
+//         border: 5px solid $color-primary;
+//         border-top: 5px solid $color-secondary;
+//         border-radius: 50%;
+//         padding: 30px;
+//         animation: loading 0.8s ease 2;
+//         // opacity: 0;
+//     }
+// }
 
 @keyframes loading {
-    to {
+    0% {
+        opacity: 1;
+    }
+    100% {
         transform: rotate(1turn);
     }
 }
 
-@keyframes appear {
+@keyframes loader-background {
     0% {
         opacity: 0;
     }
+    25% {
+        opacity: 0.5;
+    }
+    75% {
+        opacity: 0;
+    }
+}
+
+@keyframes appear {
     to {
         opacity: 1;
+    }
+}
+
+@keyframes disappear {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
     }
 }
 
@@ -235,10 +273,15 @@ main {
 // functioning
 .functioning {
     padding: $section-padding;
+    
     nav {
         display: flex;
         flex-direction: column;
         padding-left: 15px;
+        @media (min-width: 768px) {
+            flex-direction: row;
+            justify-content: space-between;
+        }
         button {
             background-color: $color-grey;
             padding: 10px 0px;
@@ -249,6 +292,12 @@ main {
             display: flex;
             align-items: center;
             transition-duration: 0.5s;
+            @media (min-width: 768px) {
+                width: 28vw;
+            }
+            @media (min-width: 992px) {
+                flex-direction: column;
+            }
             &:hover {
                 background: rgba($color-primary, 0.2);
                 & > i {
@@ -261,6 +310,9 @@ main {
                 color: darken($color: $color-grey, $amount: 50%);
                 padding: 10px ;
                 width: 30px;
+                @media (min-width: 992px) {
+                    font-size: 32px;
+                }
             }
             span {
                 position: relative;
@@ -273,6 +325,10 @@ main {
                 color: white;
                 text-align: center;
                 vertical-align: middle;
+                @media (min-width: 992px) {
+                    left: 0;
+                    top: -30px;
+                }
             }
             p {
                 flex-grow: 1;
@@ -286,6 +342,15 @@ main {
 .restaurant {
     background-color: $color-grey;
     padding: $section-padding;
+    
+    @media (min-width: 768px) {
+        .card-container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+    }
     img {
         object-fit: cover;
         height: 70%;
@@ -300,6 +365,10 @@ main {
     position: relative;
     height: 30vh;
     min-height: 250px;
+    @media (min-width: 768px) {
+        width: 45vw;
+    }
+    
     @include card-clickable;
         &-content {
             background-color: white;
@@ -373,8 +442,8 @@ main {
         }
         @each $class in $menu-section-list {
             .#{$class} {
-                opacity: 0;
-                animation: appear 3s forwards;
+                // opacity: 0;
+                // animation: appear 3s 2s forwards;
                 @include menu-section-layout;
             }
             .#{card-dish} {

@@ -19,6 +19,7 @@ header {
 }
 header img {
   width: 65%;
+  max-width: 600px;
 }
 header button {
   font-size: 24px;
@@ -33,14 +34,32 @@ footer {
   color: white;
   padding: 20px;
 }
+@media (min-width: 768px) {
+  footer {
+    display: flex;
+    justify-content: space-between;
+  }
+}
 footer img {
   filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(17deg) brightness(103%) contrast(105%);
   width: 80px;
+}
+@media (min-width: 768px) {
+  footer img {
+    order: 0;
+    width: 300px;
+  }
 }
 footer ul {
   list-style: none;
   padding-left: 0;
   margin: 0;
+}
+@media (min-width: 768px) {
+  footer ul {
+    order: 1;
+    margin-right: 50px;
+  }
 }
 footer li {
   padding: 5px 0;
@@ -52,42 +71,36 @@ footer i {
   text-align: center;
 }
 
-main::before {
-  content: "";
-  background-color: black;
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  opacity: 0;
-}
-main::after {
-  content: "";
-  cursor: wait;
-  position: fixed;
-  top: 50%;
-  bottom: 50%;
-  left: 50%;
-  right: 50%;
-  border: 5px solid #9356DC;
-  border-top: 5px solid #FF79DA;
-  border-radius: 50%;
-  padding: 30px;
-  animation: loading 1s ease 3;
-}
-
 @keyframes loading {
-  to {
+  0% {
+    opacity: 1;
+  }
+  100% {
     transform: rotate(1turn);
   }
 }
-@keyframes appear {
+@keyframes loader-background {
   0% {
     opacity: 0;
   }
+  25% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0;
+  }
+}
+@keyframes appear {
   to {
     opacity: 1;
+  }
+}
+@keyframes disappear {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
   }
 }
 .localisation {
@@ -129,6 +142,12 @@ main::after {
   flex-direction: column;
   padding-left: 15px;
 }
+@media (min-width: 768px) {
+  .functioning nav {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
 .functioning nav button {
   background-color: #F6F6F6;
   padding: 10px 0px;
@@ -139,6 +158,16 @@ main::after {
   display: flex;
   align-items: center;
   transition-duration: 0.5s;
+}
+@media (min-width: 768px) {
+  .functioning nav button {
+    width: 28vw;
+  }
+}
+@media (min-width: 992px) {
+  .functioning nav button {
+    flex-direction: column;
+  }
 }
 .functioning nav button:hover {
   background: rgba(147, 86, 220, 0.2);
@@ -152,6 +181,11 @@ main::after {
   padding: 10px;
   width: 30px;
 }
+@media (min-width: 992px) {
+  .functioning nav button i {
+    font-size: 32px;
+  }
+}
 .functioning nav button span {
   position: relative;
   left: -15px;
@@ -164,6 +198,12 @@ main::after {
   text-align: center;
   vertical-align: middle;
 }
+@media (min-width: 992px) {
+  .functioning nav button span {
+    left: 0;
+    top: -30px;
+  }
+}
 .functioning nav button p {
   flex-grow: 1;
   text-align: left;
@@ -172,6 +212,14 @@ main::after {
 .restaurant {
   background-color: #F6F6F6;
   padding: 20px;
+}
+@media (min-width: 768px) {
+  .restaurant .card-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }
 .restaurant img {
   object-fit: cover;
@@ -187,6 +235,11 @@ main::after {
   position: relative;
   height: 30vh;
   min-height: 250px;
+}
+@media (min-width: 768px) {
+  .restaurant .card {
+    width: 45vw;
+  }
 }
 .restaurant .card .full-click {
   display: block;
@@ -301,8 +354,6 @@ main .menu header button:active::after {
   opacity: 1;
 }
 main .menu .starters {
-  opacity: 0;
-  animation: appear 3s forwards;
   display: flex;
   flex-direction: column;
   padding: 20px;
@@ -379,8 +430,6 @@ main .menu .card-dish:hover, main .menu .card-dish:hover p, main .menu .card-dis
   padding-right: 50px;
 }
 main .menu .main-courses {
-  opacity: 0;
-  animation: appear 3s forwards;
   display: flex;
   flex-direction: column;
   padding: 20px;
@@ -457,8 +506,6 @@ main .menu .card-dish:hover, main .menu .card-dish:hover p, main .menu .card-dis
   padding-right: 50px;
 }
 main .menu .desserts {
-  opacity: 0;
-  animation: appear 3s forwards;
   display: flex;
   flex-direction: column;
   padding: 20px;
