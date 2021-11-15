@@ -469,8 +469,14 @@ main {
             @each $class in $menu-section-list {
                 .#{$class} {
                     // opacity: 0;
-                    // animation: appear 3s 2s forwards;
+                    // animation: appear 2s 0s forwards;
                     @include menu-section-layout;
+                    @for $i from 1 through 3 {
+                        &:nth-child(#{$i}) {
+                            opacity: 0;
+                            animation: appear 2s $i * (0.5s) forwards;
+                        }
+                    }
                 }
                 .#{card-dish} {
                     @include menu-card-layout;
@@ -501,6 +507,7 @@ main {
                         padding-right: 50px;
                     }
                 }
+            
             }
         }
         .order-confirmation {

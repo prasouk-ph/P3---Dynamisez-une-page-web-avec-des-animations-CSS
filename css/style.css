@@ -398,6 +398,18 @@ main .menu .menu-container .starters h2::before {
   height: 2px;
   width: 35px;
 }
+main .menu .menu-container .starters:nth-child(1) {
+  opacity: 0;
+  animation: appear 2s 0.5s forwards;
+}
+main .menu .menu-container .starters:nth-child(2) {
+  opacity: 0;
+  animation: appear 2s 1s forwards;
+}
+main .menu .menu-container .starters:nth-child(3) {
+  opacity: 0;
+  animation: appear 2s 1.5s forwards;
+}
 main .menu .menu-container .card-dish {
   background-color: white;
   border-radius: 20px;
@@ -486,6 +498,18 @@ main .menu .menu-container .main-courses h2::before {
   height: 2px;
   width: 35px;
 }
+main .menu .menu-container .main-courses:nth-child(1) {
+  opacity: 0;
+  animation: appear 2s 0.5s forwards;
+}
+main .menu .menu-container .main-courses:nth-child(2) {
+  opacity: 0;
+  animation: appear 2s 1s forwards;
+}
+main .menu .menu-container .main-courses:nth-child(3) {
+  opacity: 0;
+  animation: appear 2s 1.5s forwards;
+}
 main .menu .menu-container .card-dish {
   background-color: white;
   border-radius: 20px;
@@ -573,6 +597,18 @@ main .menu .menu-container .desserts h2::before {
   background-color: #99E2D0;
   height: 2px;
   width: 35px;
+}
+main .menu .menu-container .desserts:nth-child(1) {
+  opacity: 0;
+  animation: appear 2s 0.5s forwards;
+}
+main .menu .menu-container .desserts:nth-child(2) {
+  opacity: 0;
+  animation: appear 2s 1s forwards;
+}
+main .menu .menu-container .desserts:nth-child(3) {
+  opacity: 0;
+  animation: appear 2s 1.5s forwards;
 }
 main .menu .menu-container .card-dish {
   background-color: white;
