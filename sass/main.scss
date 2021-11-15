@@ -67,21 +67,15 @@ $menu-section-list: starters main-courses desserts;
     background-color: white;
     border-radius: $card-radius;
     margin-bottom: 20px;
-    line-height: 80%;
     padding: 0 50px 0 10px;
     position: relative;
-    h3 {
+    h3, p {
         font-size: medium;
         text-overflow: ellipsis;
         overflow: hidden;
         white-space: nowrap;
         transition: 1s;
-    }
-    p {
-        text-overflow: ellipsis;
-        overflow: hidden;
-        white-space: nowrap;
-        transition: 1s;
+        margin: 8px;
     }
     p:last-child {
         position: absolute;
@@ -409,18 +403,9 @@ main {
                 &:hover::after {
                     width: 50px;
                 }
-                &:hover {
+                &:hover, &:hover p, &:hover h3 {
                     padding-right: 50px;
-                    & > p {
-                        padding-right: 50px;
-                    }
-                    & > h3 {
-                        padding-right: 50px;
-                    }
                 }
-                // &:hover p {
-                //     padding-right: 50px;
-                // }
             }
         }
         .order-confirmation {

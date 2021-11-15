@@ -325,23 +325,17 @@ main .menu .card-dish {
   background-color: white;
   border-radius: 20px;
   margin-bottom: 20px;
-  line-height: 80%;
   padding: 0 50px 0 10px;
   position: relative;
   position: relative;
 }
-main .menu .card-dish h3 {
+main .menu .card-dish h3, main .menu .card-dish p {
   font-size: medium;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
   transition: 1s;
-}
-main .menu .card-dish p {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  transition: 1s;
+  margin: 8px;
 }
 main .menu .card-dish p:last-child {
   position: absolute;
@@ -381,13 +375,7 @@ main .menu .card-dish::after {
 main .menu .card-dish:hover::after {
   width: 50px;
 }
-main .menu .card-dish:hover {
-  padding-right: 50px;
-}
-main .menu .card-dish:hover > p {
-  padding-right: 50px;
-}
-main .menu .card-dish:hover > h3 {
+main .menu .card-dish:hover, main .menu .card-dish:hover p, main .menu .card-dish:hover h3 {
   padding-right: 50px;
 }
 main .menu .main-courses {
@@ -415,23 +403,17 @@ main .menu .card-dish {
   background-color: white;
   border-radius: 20px;
   margin-bottom: 20px;
-  line-height: 80%;
   padding: 0 50px 0 10px;
   position: relative;
   position: relative;
 }
-main .menu .card-dish h3 {
+main .menu .card-dish h3, main .menu .card-dish p {
   font-size: medium;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
   transition: 1s;
-}
-main .menu .card-dish p {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  transition: 1s;
+  margin: 8px;
 }
 main .menu .card-dish p:last-child {
   position: absolute;
@@ -471,13 +453,7 @@ main .menu .card-dish::after {
 main .menu .card-dish:hover::after {
   width: 50px;
 }
-main .menu .card-dish:hover {
-  padding-right: 50px;
-}
-main .menu .card-dish:hover > p {
-  padding-right: 50px;
-}
-main .menu .card-dish:hover > h3 {
+main .menu .card-dish:hover, main .menu .card-dish:hover p, main .menu .card-dish:hover h3 {
   padding-right: 50px;
 }
 main .menu .desserts {
@@ -505,23 +481,17 @@ main .menu .card-dish {
   background-color: white;
   border-radius: 20px;
   margin-bottom: 20px;
-  line-height: 80%;
   padding: 0 50px 0 10px;
   position: relative;
   position: relative;
 }
-main .menu .card-dish h3 {
+main .menu .card-dish h3, main .menu .card-dish p {
   font-size: medium;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
   transition: 1s;
-}
-main .menu .card-dish p {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  transition: 1s;
+  margin: 8px;
 }
 main .menu .card-dish p:last-child {
   position: absolute;
@@ -561,13 +531,7 @@ main .menu .card-dish::after {
 main .menu .card-dish:hover::after {
   width: 50px;
 }
-main .menu .card-dish:hover {
-  padding-right: 50px;
-}
-main .menu .card-dish:hover > p {
-  padding-right: 50px;
-}
-main .menu .card-dish:hover > h3 {
+main .menu .card-dish:hover, main .menu .card-dish:hover p, main .menu .card-dish:hover h3 {
   padding-right: 50px;
 }
 main .menu .order-confirmation {
