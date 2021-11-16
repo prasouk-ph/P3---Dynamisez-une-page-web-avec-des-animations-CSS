@@ -19,28 +19,34 @@ $menu-section-list: starters main-courses desserts;
 }
 
 @mixin button-heart-filling {
-    &::after {
-        font-family: "Font Awesome 5 Free";
-        content: "\f004";
-        font-weight: 400;
-        position: absolute;
-        top: 5%;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        opacity: 0;
-        transition: opacity 0.5s;
+        transition: all 0.5s;
         transition-timing-function: ease-in-out;
-        font-size: 32px;
-    }
-    &:active::after {
-        font-weight: 900;
-        background: linear-gradient(to top, $color-secondary, $color-primary);
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        opacity: 1;
-    }
+        &::after {
+            font-family: "Font Awesome 5 Free";
+            content: "\f004";
+            font-weight: 900;
+            position: absolute;
+            top: 8%;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, $color-secondary, $color-primary);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            transition: opacity 0.5s;
+            transition-timing-function: ease-in-out;
+            opacity: 0;
+        }
+        &:active::after {
+            opacity: 1;
+        }
+        &:active {
+            background: linear-gradient(to top, $color-secondary, $color-primary);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
 }
 
 @mixin menu-section-layout {
@@ -184,40 +190,36 @@ footer {
 
 // main
 // loader
-main {
-    // opacity: 0;
-    // animation: disappear 6s forwards;
-    &::before {
-        content: "";
-        background-color: black;
-        position: fixed;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        z-index: 5;
-        // to make the entire screen dark
-        animation: loader-background 9s forwards;
-    }
+// main {
+//     &::before {
+//         content: "";
+//         background-color: black;
+//         position: fixed;
+//         top: 0;
+//         left: 0;
+//         bottom: 0;
+//         right: 0;
+//         z-index: 4;
+//         // to make the entire screen dark
+//         animation: loader-background 9s forwards;
 //     }
-    &::after {
-        content: "";
-        cursor: wait;
-        position: fixed;
-        top: 50%;
-        bottom: 50%;
-        left: 50%;
-        right: 50%;
-        z-index: 5;
-        border: 5px solid $color-primary;
-        border-top: 5px solid $color-secondary;
-        border-radius: 50%;
-        padding: 30px;
-        animation: loading 0.8s 1s ease 2;
-        opacity: 0;
-    }
-}
-
+//     &::after {
+//         content: "";
+//         cursor: wait;
+//         position: fixed;
+//         top: 50%;
+//         bottom: 50%;
+//         left: 50%;
+//         right: 50%;
+//         z-index: 4;
+//         border: 5px solid $color-primary;
+//         border-top: 5px solid $color-secondary;
+//         border-radius: 50%;
+//         padding: 30px;
+//         animation: loading 0.8s 1s ease 2;
+//         opacity: 0;
+//     }
+// }
 @keyframes loading {
     0% {
         opacity: 1;
@@ -237,6 +239,7 @@ main {
     }
     100% {
         opacity: 0;
+        z-index: -1;
     }
 }
 
@@ -253,6 +256,22 @@ main {
     to {
         opacity: 0;
     }
+}
+
+.loader {
+    cursor: wait;
+    position: fixed;
+    top: 50%;
+    bottom: 50%;
+    left: 50%;
+    right: 50%;
+    z-index: 4;
+    border: 5px solid $color-primary;
+    border-top: 5px solid $color-secondary;
+    border-radius: 50%;
+    padding: 30px;
+    animation: loading 0.8s 1s ease 2;
+    opacity: 0;
 }
 
 // localisation
