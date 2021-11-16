@@ -1,0 +1,164 @@
+// localisation
+.localisation {
+    background-color: darken($color: $color-grey, $amount: 5%);
+    text-align: center;
+    padding: $section-padding;
+    input {
+    outline: none;
+    border: none;
+    background-color: inherit;
+    }
+    i {
+    padding-right: 10px;
+    }
+}
+
+
+// exploration
+.exploration {
+    background-color: $color-grey;
+    text-align: center;
+    padding: $section-padding;
+    h1 {
+    margin: 0;
+    }
+    button {
+    @include button-round;
+    }
+}
+
+// functioning
+.functioning {
+    padding: $section-padding;
+    nav {
+        display: flex;
+        flex-direction: column;
+        padding-left: 15px;
+        @media (min-width: 768px) {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        @media (min-width: 992px) {
+            padding-left: 0;
+        }
+        button {
+            background-color: $color-grey;
+            padding: 10px 0px;
+            margin: 15px 0;
+            border: none;
+            border-radius: $card-radius;
+            box-shadow: 0px 0px 10px 5px rgba(242, 242, 242, 1);
+            display: flex;
+            align-items: center;
+            transition-duration: 0.5s;
+            @media (min-width: 768px) {
+                width: 28vw;
+            }
+            @media (min-width: 992px) {
+                flex-direction: column;
+            }
+            &:hover {
+                background: rgba($color-primary, 0.2);
+                & > i {
+                    color: $color-primary;
+                    // effect on icon when hover button
+                }
+            }
+            i {
+                font-size: 16px;
+                color: darken($color: $color-grey, $amount: 50%);
+                padding: 10px ;
+                width: 30px;
+                @media (min-width: 992px) {
+                    font-size: 32px;
+                }
+            }
+            span {
+                position: relative;
+                left: -15px;
+                border-radius: 50%;
+                background-color: $color-primary;
+                padding: 8px;
+                width: 10px;
+                height: 10px;
+                color: white;
+                text-align: center;
+                vertical-align: middle;
+                @media (min-width: 992px) {
+                    left: 0;
+                    top: -30px;
+                }
+            }
+            p {
+                flex-grow: 1;
+                text-align: left;
+            }
+        }
+    }
+}
+
+// restaurants
+.restaurant {
+    background-color: $color-grey;
+    padding: $section-padding;
+    @media (min-width: 768px) {
+        .card-container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+    }
+    img {
+        object-fit: cover;
+        height: 70%;
+        width: 100%;
+        border-radius: 20px 20px 0px 0px;
+    }
+    .card {
+    display: flex;
+    flex-direction: column;
+    border-radius: $card-radius;
+    margin-bottom: 20px;
+    position: relative;
+    height: 30vh;
+    min-height: 250px;
+    @media (min-width: 768px) {
+        width: 45vw;
+    }
+    
+    @include card-clickable;
+        &-content {
+            background-color: white;
+            border-radius: 0 0 20px 20px;
+            line-height: 50%;
+            padding-left: 10px;
+            margin: 0;
+            position: relative;
+            height: 80px;
+            p {
+                font-size: large;
+            }
+            button {
+                background-color: white;
+                border: none;
+                font-size: 30px;
+                position: absolute;
+                right: 5%;
+                bottom: 30%;
+                cursor: pointer;
+                @include button-heart-filling;
+                z-index: 1;
+            }
+        }
+        .label {
+            background-color: $color-tertiary;
+            color: darken($color: $color-tertiary, $amount: 30%);
+            font-weight: bold;
+            position: absolute;
+            right: 3%;
+            top: 5%;
+            padding: 10px 15px;
+        }
+    }
+}

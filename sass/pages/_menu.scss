@@ -1,0 +1,102 @@
+// menu
+main {
+    header {
+        padding: 0 20px;
+    }
+    .illustration {
+        img {
+            object-fit: cover;
+            width: 100vw;
+            height: 25vh;
+        }
+    }
+
+    // main {
+    //     background-color: $color-grey;
+    // }
+
+    .menu {
+        background-color: $color-grey;
+        border-radius: 20px 20px 0 0;
+        position: relative;
+        top: -20px;
+        @media (min-width: 768px) {
+            text-align: center;
+        }
+        header {
+            justify-content: flex-start;
+            @media (min-width: 768px) {
+                justify-content: center;
+            }
+            h1 {
+                font-family: 'Shrikhand';
+            }
+            button {
+                right: 4%;
+                left: auto;
+                background-color: inherit;
+                font-size: 30px;
+                @include button-heart-filling;
+            }
+        }
+        .menu-container {
+            @media (min-width: 992px) {
+            display: flex;
+            justify-content: space-around;
+            }
+            @each $class in $menu-section-list {
+                .#{$class} {
+                    // opacity: 0;
+                    // animation: appear 2s 0s forwards;
+                    @include menu-section-layout;
+                    @for $i from 1 through 3 {
+                        &:nth-child(#{$i}) {
+                            opacity: 0;
+                            animation: appear 2s $i * (0.5s) forwards;
+                        }
+                    }
+                }
+                .#{card-dish} {
+                    @include menu-card-layout;
+                    @include card-clickable;
+                    position: relative;
+                    &::after {
+                        font-family: "Font Awesome 5 Free";
+                        content: "\f058";
+                        font-weight: 900;
+                        color: white;
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                        bottom: 0;
+                        width: 0;
+                        overflow: hidden;
+                        border-radius: 0 10px 10px 0;
+                        background-color: $color-tertiary;
+                        transition: 1s;
+                        transform: rotate(1turn);
+                        text-align: center;
+                        vertical-align: middle;
+                    }
+                    &:hover::after {
+                        width: 50px;
+                    }
+                    &:hover, &:hover p, &:hover h3 {
+                        padding-right: 50px;
+                    }
+                }
+            
+            }
+        }
+        .order-confirmation {
+            padding: 50px 20px;
+            text-align: center;
+            button {
+            @include button-round;
+            @media (min-width: 768px) {
+                width: 100%;
+            }
+            }
+        }
+    }
+}
