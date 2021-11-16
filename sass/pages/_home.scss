@@ -16,7 +16,6 @@
 
 // exploration
 .exploration {
-    background-color: $color-grey;
     text-align: center;
     padding: $section-padding;
     h1 {
@@ -30,6 +29,7 @@
 // functioning
 .functioning {
     padding: $section-padding;
+    background-color: white;
     nav {
         display: flex;
         flex-direction: column;
@@ -99,7 +99,6 @@
 
 // restaurants
 .restaurant {
-    background-color: $color-grey;
     padding: $section-padding;
     @media (min-width: 768px) {
         .card-container {

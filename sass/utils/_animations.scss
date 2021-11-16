@@ -1,0 +1,89 @@
+
+
+// main
+// loader
+// main {
+//     &::before {
+//         content: "";
+//         background-color: black;
+//         position: fixed;
+//         top: 0;
+//         left: 0;
+//         bottom: 0;
+//         right: 0;
+//         z-index: 10;
+//         // to make the entire screen dark
+//         animation: loader-background 9s forwards;
+//     }
+
+// //     &::after {
+// //         content: "";
+// //         cursor: wait;
+// //         position: fixed;
+// //         top: 50%;
+// //         bottom: 50%;
+// //         left: 50%;
+// //         right: 50%;
+// //         z-index: 4;
+// //         border: 5px solid $color-primary;
+// //         border-top: 5px solid $color-secondary;
+// //         border-radius: 50%;
+// //         padding: 30px;
+// //         animation: loading 0.8s 1s ease 2;
+// //         opacity: 0;
+// //     }
+// }
+@keyframes loading {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        transform: rotate(1turn);
+        opacity: 1;
+    }
+}
+
+@keyframes loader-background {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 0;
+        z-index: -1;
+    }
+}
+
+@keyframes appear {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes disappear {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.loader {
+    cursor: wait;
+    position: fixed;
+    top: 50%;
+    bottom: 50%;
+    left: 50%;
+    right: 50%;
+    z-index: 2;
+    border: 5px solid $color-primary;
+    border-top: 5px solid $color-secondary;
+    border-radius: 50%;
+    padding: 30px;
+    animation: loading 0.8s 1s ease 2;
+    opacity: 0;
+}
+

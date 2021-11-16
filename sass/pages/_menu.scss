@@ -10,11 +10,6 @@ main {
             height: 25vh;
         }
     }
-
-    // main {
-    //     background-color: $color-grey;
-    // }
-
     .menu {
         background-color: $color-grey;
         border-radius: 20px 20px 0 0;
@@ -69,17 +64,18 @@ main {
                         right: 0;
                         top: 0;
                         bottom: 0;
-                        width: 0;
+                        width: 0px;
+                        // padding: 20px;
                         overflow: hidden;
                         border-radius: 0 10px 10px 0;
                         background-color: $color-tertiary;
                         transition: 1s;
-                        transform: rotate(1turn);
                         text-align: center;
                         vertical-align: middle;
                     }
                     &:hover::after {
                         width: 50px;
+                        transform: rotate(1turn);
                     }
                     &:hover, &:hover p, &:hover h3 {
                         padding-right: 50px;

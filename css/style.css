@@ -1,9 +1,63 @@
+@keyframes loading {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(1turn);
+    opacity: 1;
+  }
+}
+@keyframes loader-background {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+@keyframes appear {
+  to {
+    opacity: 1;
+  }
+}
+@keyframes disappear {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+.loader {
+  cursor: wait;
+  position: fixed;
+  top: 50%;
+  bottom: 50%;
+  left: 50%;
+  right: 50%;
+  z-index: 2;
+  border: 5px solid #9356DC;
+  border-top: 5px solid #FF79DA;
+  border-radius: 50%;
+  padding: 30px;
+  animation: loading 0.8s 1s ease 2;
+  opacity: 0;
+}
+
 * {
   font-family: "Roboto";
 }
 
 body {
   margin: auto;
+}
+
+main {
+  background-color: #F6F6F6;
 }
 
 button {
@@ -91,7 +145,6 @@ footer i {
 }
 
 .exploration {
-  background-color: #F6F6F6;
   text-align: center;
   padding: 20px;
 }
@@ -109,6 +162,7 @@ footer i {
 
 .functioning {
   padding: 20px;
+  background-color: white;
 }
 .functioning nav {
   display: flex;
@@ -188,7 +242,6 @@ footer i {
 }
 
 .restaurant {
-  background-color: #F6F6F6;
   padding: 20px;
 }
 @media (min-width: 768px) {
@@ -444,17 +497,17 @@ main .menu .menu-container .card-dish::after {
   right: 0;
   top: 0;
   bottom: 0;
-  width: 0;
+  width: 0px;
   overflow: hidden;
   border-radius: 0 10px 10px 0;
   background-color: #99E2D0;
   transition: 1s;
-  transform: rotate(1turn);
   text-align: center;
   vertical-align: middle;
 }
 main .menu .menu-container .card-dish:hover::after {
   width: 50px;
+  transform: rotate(1turn);
 }
 main .menu .menu-container .card-dish:hover, main .menu .menu-container .card-dish:hover p, main .menu .menu-container .card-dish:hover h3 {
   padding-right: 50px;
@@ -544,17 +597,17 @@ main .menu .menu-container .card-dish::after {
   right: 0;
   top: 0;
   bottom: 0;
-  width: 0;
+  width: 0px;
   overflow: hidden;
   border-radius: 0 10px 10px 0;
   background-color: #99E2D0;
   transition: 1s;
-  transform: rotate(1turn);
   text-align: center;
   vertical-align: middle;
 }
 main .menu .menu-container .card-dish:hover::after {
   width: 50px;
+  transform: rotate(1turn);
 }
 main .menu .menu-container .card-dish:hover, main .menu .menu-container .card-dish:hover p, main .menu .menu-container .card-dish:hover h3 {
   padding-right: 50px;
@@ -644,17 +697,17 @@ main .menu .menu-container .card-dish::after {
   right: 0;
   top: 0;
   bottom: 0;
-  width: 0;
+  width: 0px;
   overflow: hidden;
   border-radius: 0 10px 10px 0;
   background-color: #99E2D0;
   transition: 1s;
-  transform: rotate(1turn);
   text-align: center;
   vertical-align: middle;
 }
 main .menu .menu-container .card-dish:hover::after {
   width: 50px;
+  transform: rotate(1turn);
 }
 main .menu .menu-container .card-dish:hover, main .menu .menu-container .card-dish:hover p, main .menu .menu-container .card-dish:hover h3 {
   padding-right: 50px;
@@ -675,54 +728,4 @@ main .menu .order-confirmation button {
   main .menu .order-confirmation button {
     width: 100%;
   }
-}
-
-@keyframes loading {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    transform: rotate(1turn);
-    opacity: 1;
-  }
-}
-@keyframes loader-background {
-  0% {
-    opacity: 0;
-  }
-  25% {
-    opacity: 0.5;
-  }
-  100% {
-    opacity: 0;
-    z-index: -1;
-  }
-}
-@keyframes appear {
-  to {
-    opacity: 1;
-  }
-}
-@keyframes disappear {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
-}
-.loader {
-  cursor: wait;
-  position: fixed;
-  top: 50%;
-  bottom: 50%;
-  left: 50%;
-  right: 50%;
-  z-index: 4;
-  border: 5px solid #9356DC;
-  border-top: 5px solid #FF79DA;
-  border-radius: 50%;
-  padding: 30px;
-  animation: loading 0.8s 1s ease 2;
-  opacity: 0;
 }
