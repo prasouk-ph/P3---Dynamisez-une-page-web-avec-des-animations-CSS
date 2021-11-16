@@ -184,39 +184,39 @@ footer {
 
 // main
 // loader
-// main {
-//     // opacity: 0;
-//     // animation: disappear 6s forwards;
-//     &::before {
-//         content: "";
-//         background-color: black;
-//         position: fixed;
-//         top: 0;
-//         left: 0;
-//         bottom: 0;
-//         right: 0;
-//         z-index: 5;
-//         opacity: 0;
-//         // to make the entire screen dark
-//         animation: loader-background 8s;
+main {
+    // opacity: 0;
+    // animation: disappear 6s forwards;
+    &::before {
+        content: "";
+        background-color: black;
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 5;
+        // to make the entire screen dark
+        animation: loader-background 9s forwards;
+    }
 //     }
-//     &::after {
-//         content: "";
-//         cursor: wait;
-//         position: fixed;
-//         top: 50%;
-//         bottom: 50%;
-//         left: 50%;
-//         right: 50%;
-//         z-index: 6;
-//         border: 5px solid $color-primary;
-//         border-top: 5px solid $color-secondary;
-//         border-radius: 50%;
-//         padding: 30px;
-//         animation: loading 0.8s ease 2;
-//         // opacity: 0;
-//     }
-// }
+    &::after {
+        content: "";
+        cursor: wait;
+        position: fixed;
+        top: 50%;
+        bottom: 50%;
+        left: 50%;
+        right: 50%;
+        z-index: 5;
+        border: 5px solid $color-primary;
+        border-top: 5px solid $color-secondary;
+        border-radius: 50%;
+        padding: 30px;
+        animation: loading 0.8s 1s ease 2;
+        opacity: 0;
+    }
+}
 
 @keyframes loading {
     0% {
@@ -224,6 +224,7 @@ footer {
     }
     100% {
         transform: rotate(1turn);
+        opacity: 1;
     }
 }
 
@@ -234,7 +235,7 @@ footer {
     25% {
         opacity: 0.5;
     }
-    75% {
+    100% {
         opacity: 0;
     }
 }
@@ -357,7 +358,6 @@ footer {
 .restaurant {
     background-color: $color-grey;
     padding: $section-padding;
-    
     @media (min-width: 768px) {
         .card-container {
             display: flex;

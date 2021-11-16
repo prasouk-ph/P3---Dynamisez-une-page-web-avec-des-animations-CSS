@@ -76,12 +76,41 @@ footer i {
   text-align: center;
 }
 
+main::before {
+  content: "";
+  background-color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 5;
+  animation: loader-background 9s forwards;
+}
+main::after {
+  content: "";
+  cursor: wait;
+  position: fixed;
+  top: 50%;
+  bottom: 50%;
+  left: 50%;
+  right: 50%;
+  z-index: 5;
+  border: 5px solid #9356DC;
+  border-top: 5px solid #FF79DA;
+  border-radius: 50%;
+  padding: 30px;
+  animation: loading 0.8s 1s ease 2;
+  opacity: 0;
+}
+
 @keyframes loading {
   0% {
     opacity: 1;
   }
   100% {
     transform: rotate(1turn);
+    opacity: 1;
   }
 }
 @keyframes loader-background {
@@ -91,7 +120,7 @@ footer i {
   25% {
     opacity: 0.5;
   }
-  75% {
+  100% {
     opacity: 0;
   }
 }
