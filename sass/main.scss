@@ -424,7 +424,7 @@ footer {
                 bottom: 30%;
                 cursor: pointer;
                 @include button-heart-filling;
-                z-index: 2;
+                z-index: 1;
             }
         }
         .label {
