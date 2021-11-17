@@ -639,6 +639,6 @@ main .menu .order-confirmation button {
 }
 @media (min-width: 768px) {
   main .menu .order-confirmation button {
-    width: 100%;
+    width: 70vw;
   }
 }
