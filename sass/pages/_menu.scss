@@ -41,7 +41,23 @@ main {
             }
             @each $class in $menu-section-list {
                 .#{$class} {
-                    @include menu-section-layout;
+                    display: flex;
+                    flex-direction: column;
+                    padding: $section-padding;
+                    h2 {
+                        font-weight: normal;
+                        font-size: smaller;
+                        position: relative;
+                        margin-bottom: $card-padding;
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            bottom: -25%;
+                            background-color: $color-tertiary;
+                            height: 2px;
+                            width: 35px;
+                        }
+                    } 
                     @for $i from 1 through 3 {
                         &:nth-child(#{$i}) {
                             opacity: 0;
@@ -86,15 +102,15 @@ main {
                         color: white;
                         padding: 25px;
                         margin-right: -70px;
-                        transition: 0.6s;
+                        transition: 0.4s;
                         i {
                             transition: 0.5s;
                         }
                     }
-                    &:hover > .validation-box{
+                    &:active > .validation-box{
                         margin-right: 0;
                     }
-                    &:hover i {
+                    &:active i {
                         transform: rotate(1turn);
                     }
                 }
@@ -104,7 +120,6 @@ main {
             padding: 50px 20px;
             text-align: center;
             button {
-            @include button-round;
             @media (min-width: 768px) {
                 width: 70vw;
             }

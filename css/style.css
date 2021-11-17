@@ -33,6 +33,15 @@ button {
   cursor: pointer;
 }
 
+.button-round {
+  background: radial-gradient(ellipse at top left, #FF79DA, #9356DC);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 15px 20px;
+  font-weight: bold;
+}
+
 header {
   display: flex;
   justify-content: center;
@@ -120,14 +129,6 @@ footer i {
 .exploration h1 {
   margin: 0;
 }
-.exploration button {
-  background: radial-gradient(ellipse at top left, #FF79DA, #9356DC);
-  color: white;
-  border: none;
-  border-radius: 30px;
-  padding: 15px 20px;
-  font-weight: bold;
-}
 
 .functioning {
   padding: 20px;
@@ -158,7 +159,7 @@ footer i {
   box-shadow: 0px 0px 10px 5px #f2f2f2;
   display: flex;
   align-items: center;
-  transition-duration: 0.5s;
+  transition-duration: 0.4s;
 }
 @media (min-width: 768px) {
   .functioning nav button {
@@ -237,11 +238,6 @@ footer i {
   height: 30vh;
   min-height: 250px;
 }
-@media (min-width: 768px) {
-  .restaurant .card {
-    width: 45vw;
-  }
-}
 .restaurant .card .full-click {
   display: block;
   position: absolute;
@@ -251,6 +247,11 @@ footer i {
   bottom: 0;
   z-index: 1;
   opacity: 0;
+}
+@media (min-width: 768px) {
+  .restaurant .card {
+    width: 45vw;
+  }
 }
 .restaurant .card-content {
   background-color: white;
@@ -272,7 +273,7 @@ footer i {
   right: 5%;
   bottom: 30%;
   cursor: pointer;
-  transition: all 0.5s;
+  transition: all 0.3s;
   transition-timing-function: ease-in-out;
   z-index: 1;
 }
@@ -289,7 +290,7 @@ footer i {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  transition: opacity 0.5s;
+  transition: opacity 0.3s;
   transition-timing-function: ease-in-out;
   opacity: 0;
 }
@@ -302,6 +303,17 @@ footer i {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+@media (min-width: 992px) {
+  .restaurant .card-content button:hover::after {
+    opacity: 1;
+  }
+  .restaurant .card-content button:hover {
+    background: linear-gradient(to top, #FF79DA, #9356DC);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
 .restaurant .card .label {
   background-color: #99E2D0;
   color: #32b091;
@@ -310,6 +322,32 @@ footer i {
   right: 3%;
   top: 5%;
   padding: 10px 15px;
+}
+
+.overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: black;
+  opacity: 0.5;
+  z-index: 2;
+  animation: slide-to-bottom 1s 2s ease forwards;
+}
+.overlay .loader {
+  cursor: wait;
+  position: fixed;
+  top: 50%;
+  bottom: 50%;
+  left: 50%;
+  right: 50%;
+  border: 5px solid #9356DC;
+  border-top: 5px solid #FF79DA;
+  border-radius: 50%;
+  padding: 30px;
+  animation: rotation 0.8s ease 2;
+  opacity: 0;
 }
 
 main header {
@@ -347,7 +385,7 @@ main .menu header button {
   left: auto;
   background-color: inherit;
   font-size: 30px;
-  transition: all 0.5s;
+  transition: all 0.3s;
   transition-timing-function: ease-in-out;
 }
 main .menu header button::after {
@@ -363,7 +401,7 @@ main .menu header button::after {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  transition: opacity 0.5s;
+  transition: opacity 0.3s;
   transition-timing-function: ease-in-out;
   opacity: 0;
 }
@@ -375,6 +413,17 @@ main .menu header button:active {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+@media (min-width: 992px) {
+  main .menu header button:hover::after {
+    opacity: 1;
+  }
+  main .menu header button:hover {
+    background: linear-gradient(to top, #FF79DA, #9356DC);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 }
 @media (min-width: 992px) {
   main .menu .menu-container {
@@ -452,15 +501,15 @@ main .menu .menu-container .card-dish .validation-box {
   color: white;
   padding: 25px;
   margin-right: -70px;
-  transition: 0.6s;
+  transition: 0.4s;
 }
 main .menu .menu-container .card-dish .validation-box i {
   transition: 0.5s;
 }
-main .menu .menu-container .card-dish:hover > .validation-box {
+main .menu .menu-container .card-dish:active > .validation-box {
   margin-right: 0;
 }
-main .menu .menu-container .card-dish:hover i {
+main .menu .menu-container .card-dish:active i {
   transform: rotate(1turn);
 }
 main .menu .menu-container .main-courses {
@@ -533,15 +582,15 @@ main .menu .menu-container .card-dish .validation-box {
   color: white;
   padding: 25px;
   margin-right: -70px;
-  transition: 0.6s;
+  transition: 0.4s;
 }
 main .menu .menu-container .card-dish .validation-box i {
   transition: 0.5s;
 }
-main .menu .menu-container .card-dish:hover > .validation-box {
+main .menu .menu-container .card-dish:active > .validation-box {
   margin-right: 0;
 }
-main .menu .menu-container .card-dish:hover i {
+main .menu .menu-container .card-dish:active i {
   transform: rotate(1turn);
 }
 main .menu .menu-container .desserts {
@@ -614,28 +663,20 @@ main .menu .menu-container .card-dish .validation-box {
   color: white;
   padding: 25px;
   margin-right: -70px;
-  transition: 0.6s;
+  transition: 0.4s;
 }
 main .menu .menu-container .card-dish .validation-box i {
   transition: 0.5s;
 }
-main .menu .menu-container .card-dish:hover > .validation-box {
+main .menu .menu-container .card-dish:active > .validation-box {
   margin-right: 0;
 }
-main .menu .menu-container .card-dish:hover i {
+main .menu .menu-container .card-dish:active i {
   transform: rotate(1turn);
 }
 main .menu .order-confirmation {
   padding: 50px 20px;
   text-align: center;
-}
-main .menu .order-confirmation button {
-  background: radial-gradient(ellipse at top left, #FF79DA, #9356DC);
-  color: white;
-  border: none;
-  border-radius: 30px;
-  padding: 15px 20px;
-  font-weight: bold;
 }
 @media (min-width: 768px) {
   main .menu .order-confirmation button {

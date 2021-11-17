@@ -21,9 +21,6 @@
     h1 {
     margin: 0;
     }
-    button {
-    @include button-round;
-    }
 }
 
 // functioning
@@ -50,7 +47,7 @@
             box-shadow: 0px 0px 10px 5px rgba(242, 242, 242, 1);
             display: flex;
             align-items: center;
-            transition-duration: 0.5s;
+            transition-duration: 0.4s;
             @media (min-width: 768px) {
                 width: 28vw;
             }
@@ -123,11 +120,19 @@
     position: relative;
     height: 30vh;
     min-height: 250px;
+    .full-click {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+        opacity: 0;
+    }
     @media (min-width: 768px) {
         width: 45vw;
     }
-    
-    @include card-clickable;
         &-content {
             background-color: white;
             border-radius: 0 0 20px 20px;
@@ -148,6 +153,7 @@
                 bottom: 30%;
                 cursor: pointer;
                 @include button-heart-filling;
+                // make the button clickable because of overlay effect
                 z-index: 1;
             }
         }
@@ -162,3 +168,31 @@
         }
     }
 }
+
+// loader
+.overlay {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: black;
+    opacity: 0.5;
+    z-index: 2;
+    animation: slide-to-bottom 1s 2s ease forwards;
+    .loader {
+        cursor: wait;
+        position: fixed;
+        top: 50%;
+        bottom: 50%;
+        left: 50%;
+        right: 50%;
+        border: 5px solid $color-primary;
+        border-top: 5px solid $color-secondary;
+        border-radius: 50%;
+        padding: 30px;
+        animation: rotation 0.8s ease 2;
+        opacity: 0;
+    }
+}
+
