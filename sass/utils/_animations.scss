@@ -40,50 +40,40 @@
     100% {
         transform: rotate(1turn);
         opacity: 1;
+        
     }
 }
 
-@keyframes loader-background {
-    0% {
-        opacity: 0;
-    }
-    25% {
-        opacity: 0.5;
-    }
+@keyframes slide-to-bottom {
     100% {
-        opacity: 0;
-        z-index: -1;
+        transform: translateY(100%);
     }
 }
 
-@keyframes appear {
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes disappear {
-    from {
-        opacity: 1;
-    }
-    to {
-        opacity: 0;
-    }
-}
-
-.loader {
-    cursor: wait;
+.overlay {
     position: fixed;
-    top: 50%;
-    bottom: 50%;
-    left: 50%;
-    right: 50%;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: black;
+    opacity: 0.5;
     z-index: 2;
-    border: 5px solid $color-primary;
-    border-top: 5px solid $color-secondary;
-    border-radius: 50%;
-    padding: 30px;
-    animation: loading 0.8s 1s ease 2;
-    opacity: 0;
+    animation: slide-to-bottom 1s 2s ease forwards;
+    .loader {
+        cursor: wait;
+        position: fixed;
+        top: 50%;
+        bottom: 50%;
+        left: 50%;
+        right: 50%;
+        z-index: 10;
+        border: 5px solid $color-primary;
+        border-top: 5px solid $color-secondary;
+        border-radius: 50%;
+        padding: 30px;
+        animation: loading 0.8s ease 2;
+        opacity: 0;
+    }
 }
 
