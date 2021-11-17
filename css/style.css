@@ -1,4 +1,4 @@
-@keyframes loading {
+@keyframes rotation {
   0% {
     opacity: 1;
   }
@@ -10,6 +10,11 @@
 @keyframes slide-to-bottom {
   100% {
     transform: translateY(100%);
+  }
+}
+@keyframes appear {
+  to {
+    opacity: 1;
   }
 }
 * {
@@ -398,23 +403,25 @@ main .menu .menu-container .starters h2::before {
 }
 main .menu .menu-container .starters:nth-child(1) {
   opacity: 0;
-  animation: appear 2s 0.5s forwards;
+  animation: appear 0.7s 0.5s forwards;
 }
 main .menu .menu-container .starters:nth-child(2) {
   opacity: 0;
-  animation: appear 2s 1s forwards;
+  animation: appear 0.7s 1s forwards;
 }
 main .menu .menu-container .starters:nth-child(3) {
   opacity: 0;
-  animation: appear 2s 1.5s forwards;
+  animation: appear 0.7s 1.5s forwards;
 }
 main .menu .menu-container .card-dish {
+  cursor: pointer;
+  overflow: hidden;
   background-color: white;
   border-radius: 20px;
   margin-bottom: 20px;
-  padding: 0 50px 0 10px;
-  position: relative;
-  position: relative;
+  padding: 0 0 0 10px;
+  display: flex;
+  align-items: center;
 }
 @media (min-width: 992px) {
   main .menu .menu-container .card-dish {
@@ -422,59 +429,39 @@ main .menu .menu-container .card-dish {
     width: 29vw;
   }
 }
-main .menu .menu-container .card-dish h3, main .menu .menu-container .card-dish p {
+main .menu .menu-container .card-dish .card-content {
   font-size: medium;
+  text-align: left;
+  overflow: hidden;
+  flex: 1;
+}
+main .menu .menu-container .card-dish .card-content h3, main .menu .menu-container .card-dish .card-content p {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
-  transition: 1s;
   margin: 8px;
 }
-main .menu .menu-container .card-dish p:last-child {
-  position: absolute;
-  right: 5%;
-  bottom: 0%;
+main .menu .menu-container .card-dish .price {
+  align-self: flex-end;
   font-weight: bold;
+  padding: 0 20px;
   transition: 1s;
 }
-@media (min-width: 992px) {
-  main .menu .menu-container .card-dish p:last-child {
-    position: relative;
-    right: 0;
-  }
-}
-main .menu .menu-container .card-dish .full-click {
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 1;
-  opacity: 0;
-}
-main .menu .menu-container .card-dish::after {
-  font-family: "Font Awesome 5 Free";
-  content: "\f058";
-  font-weight: 900;
-  color: white;
-  position: absolute;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  width: 0px;
-  overflow: hidden;
-  border-radius: 0 10px 10px 0;
+main .menu .menu-container .card-dish .validation-box {
   background-color: #99E2D0;
-  transition: 1s;
-  text-align: center;
-  vertical-align: middle;
+  color: white;
+  padding: 25px;
+  margin-right: -70px;
+  transition: 0.6s;
 }
-main .menu .menu-container .card-dish:hover::after {
-  width: 50px;
+main .menu .menu-container .card-dish .validation-box i {
+  transition: 0.5s;
 }
-main .menu .menu-container .card-dish:hover, main .menu .menu-container .card-dish:hover p, main .menu .menu-container .card-dish:hover h3 {
-  padding-right: 50px;
+main .menu .menu-container .card-dish:hover > .validation-box {
+  margin-right: 0;
+}
+main .menu .menu-container .card-dish:hover i {
+  transform: rotate(1turn);
 }
 main .menu .menu-container .main-courses {
   display: flex;
@@ -497,23 +484,25 @@ main .menu .menu-container .main-courses h2::before {
 }
 main .menu .menu-container .main-courses:nth-child(1) {
   opacity: 0;
-  animation: appear 2s 0.5s forwards;
+  animation: appear 0.7s 0.5s forwards;
 }
 main .menu .menu-container .main-courses:nth-child(2) {
   opacity: 0;
-  animation: appear 2s 1s forwards;
+  animation: appear 0.7s 1s forwards;
 }
 main .menu .menu-container .main-courses:nth-child(3) {
   opacity: 0;
-  animation: appear 2s 1.5s forwards;
+  animation: appear 0.7s 1.5s forwards;
 }
 main .menu .menu-container .card-dish {
+  cursor: pointer;
+  overflow: hidden;
   background-color: white;
   border-radius: 20px;
   margin-bottom: 20px;
-  padding: 0 50px 0 10px;
-  position: relative;
-  position: relative;
+  padding: 0 0 0 10px;
+  display: flex;
+  align-items: center;
 }
 @media (min-width: 992px) {
   main .menu .menu-container .card-dish {
@@ -521,59 +510,39 @@ main .menu .menu-container .card-dish {
     width: 29vw;
   }
 }
-main .menu .menu-container .card-dish h3, main .menu .menu-container .card-dish p {
+main .menu .menu-container .card-dish .card-content {
   font-size: medium;
+  text-align: left;
+  overflow: hidden;
+  flex: 1;
+}
+main .menu .menu-container .card-dish .card-content h3, main .menu .menu-container .card-dish .card-content p {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
-  transition: 1s;
   margin: 8px;
 }
-main .menu .menu-container .card-dish p:last-child {
-  position: absolute;
-  right: 5%;
-  bottom: 0%;
+main .menu .menu-container .card-dish .price {
+  align-self: flex-end;
   font-weight: bold;
+  padding: 0 20px;
   transition: 1s;
 }
-@media (min-width: 992px) {
-  main .menu .menu-container .card-dish p:last-child {
-    position: relative;
-    right: 0;
-  }
-}
-main .menu .menu-container .card-dish .full-click {
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 1;
-  opacity: 0;
-}
-main .menu .menu-container .card-dish::after {
-  font-family: "Font Awesome 5 Free";
-  content: "\f058";
-  font-weight: 900;
-  color: white;
-  position: absolute;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  width: 0px;
-  overflow: hidden;
-  border-radius: 0 10px 10px 0;
+main .menu .menu-container .card-dish .validation-box {
   background-color: #99E2D0;
-  transition: 1s;
-  text-align: center;
-  vertical-align: middle;
+  color: white;
+  padding: 25px;
+  margin-right: -70px;
+  transition: 0.6s;
 }
-main .menu .menu-container .card-dish:hover::after {
-  width: 50px;
+main .menu .menu-container .card-dish .validation-box i {
+  transition: 0.5s;
 }
-main .menu .menu-container .card-dish:hover, main .menu .menu-container .card-dish:hover p, main .menu .menu-container .card-dish:hover h3 {
-  padding-right: 50px;
+main .menu .menu-container .card-dish:hover > .validation-box {
+  margin-right: 0;
+}
+main .menu .menu-container .card-dish:hover i {
+  transform: rotate(1turn);
 }
 main .menu .menu-container .desserts {
   display: flex;
@@ -596,23 +565,25 @@ main .menu .menu-container .desserts h2::before {
 }
 main .menu .menu-container .desserts:nth-child(1) {
   opacity: 0;
-  animation: appear 2s 0.5s forwards;
+  animation: appear 0.7s 0.5s forwards;
 }
 main .menu .menu-container .desserts:nth-child(2) {
   opacity: 0;
-  animation: appear 2s 1s forwards;
+  animation: appear 0.7s 1s forwards;
 }
 main .menu .menu-container .desserts:nth-child(3) {
   opacity: 0;
-  animation: appear 2s 1.5s forwards;
+  animation: appear 0.7s 1.5s forwards;
 }
 main .menu .menu-container .card-dish {
+  cursor: pointer;
+  overflow: hidden;
   background-color: white;
   border-radius: 20px;
   margin-bottom: 20px;
-  padding: 0 50px 0 10px;
-  position: relative;
-  position: relative;
+  padding: 0 0 0 10px;
+  display: flex;
+  align-items: center;
 }
 @media (min-width: 992px) {
   main .menu .menu-container .card-dish {
@@ -620,59 +591,39 @@ main .menu .menu-container .card-dish {
     width: 29vw;
   }
 }
-main .menu .menu-container .card-dish h3, main .menu .menu-container .card-dish p {
+main .menu .menu-container .card-dish .card-content {
   font-size: medium;
+  text-align: left;
+  overflow: hidden;
+  flex: 1;
+}
+main .menu .menu-container .card-dish .card-content h3, main .menu .menu-container .card-dish .card-content p {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
-  transition: 1s;
   margin: 8px;
 }
-main .menu .menu-container .card-dish p:last-child {
-  position: absolute;
-  right: 5%;
-  bottom: 0%;
+main .menu .menu-container .card-dish .price {
+  align-self: flex-end;
   font-weight: bold;
+  padding: 0 20px;
   transition: 1s;
 }
-@media (min-width: 992px) {
-  main .menu .menu-container .card-dish p:last-child {
-    position: relative;
-    right: 0;
-  }
-}
-main .menu .menu-container .card-dish .full-click {
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 1;
-  opacity: 0;
-}
-main .menu .menu-container .card-dish::after {
-  font-family: "Font Awesome 5 Free";
-  content: "\f058";
-  font-weight: 900;
-  color: white;
-  position: absolute;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  width: 0px;
-  overflow: hidden;
-  border-radius: 0 10px 10px 0;
+main .menu .menu-container .card-dish .validation-box {
   background-color: #99E2D0;
-  transition: 1s;
-  text-align: center;
-  vertical-align: middle;
+  color: white;
+  padding: 25px;
+  margin-right: -70px;
+  transition: 0.6s;
 }
-main .menu .menu-container .card-dish:hover::after {
-  width: 50px;
+main .menu .menu-container .card-dish .validation-box i {
+  transition: 0.5s;
 }
-main .menu .menu-container .card-dish:hover, main .menu .menu-container .card-dish:hover p, main .menu .menu-container .card-dish:hover h3 {
-  padding-right: 50px;
+main .menu .menu-container .card-dish:hover > .validation-box {
+  margin-right: 0;
+}
+main .menu .menu-container .card-dish:hover i {
+  transform: rotate(1turn);
 }
 main .menu .order-confirmation {
   padding: 50px 20px;
