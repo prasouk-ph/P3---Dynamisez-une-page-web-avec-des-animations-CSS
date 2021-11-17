@@ -3,12 +3,12 @@
     background-color: darken($color: $color-grey, $amount: 5%);
     text-align: center;
     padding: $section-padding;
-    input {
+    &__input {
     outline: none;
     border: none;
     background-color: inherit;
     }
-    i {
+    &__icon {
     padding-right: 10px;
     }
 }
@@ -18,7 +18,7 @@
 .exploration {
     text-align: center;
     padding: $section-padding;
-    h1 {
+    &__title {
     margin: 0;
     }
 }
@@ -27,7 +27,7 @@
 .functioning {
     padding: $section-padding;
     background-color: white;
-    nav {
+    &__nav {
         display: flex;
         flex-direction: column;
         padding-left: 15px;
@@ -38,7 +38,7 @@
         @media (min-width: 992px) {
             padding-left: 0;
         }
-        button {
+        .nav__button {
             background-color: $color-grey;
             padding: 10px 0px;
             margin: 15px 0;
@@ -62,7 +62,7 @@
                     color: $color-primary;   
                 }
             }
-            i {
+            .nav__icon {
                 font-size: 16px;
                 color: darken($color: $color-grey, $amount: 50%);
                 padding: 10px ;
@@ -71,7 +71,7 @@
                     font-size: 32px;
                 }
             }
-            span {
+            .nav__sticker {
                 position: relative;
                 left: -15px;
                 border-radius: 50%;
@@ -87,7 +87,7 @@
                     top: -30px;
                 }
             }
-            p {
+            .nav__text {
                 flex-grow: 1;
                 text-align: left;
             }
@@ -99,20 +99,20 @@
 .restaurant {
     padding: $section-padding;
     @media (min-width: 768px) {
-        .card-container {
+        &__card-container {
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
             justify-content: space-between;
         }
     }
-    img {
+    .card__image {
         object-fit: cover;
         height: 70%;
         width: 100%;
         border-radius: 20px 20px 0px 0px;
     }
-    .card {
+    &__card {
     display: flex;
     flex-direction: column;
     border-radius: $card-radius;
@@ -120,7 +120,7 @@
     position: relative;
     height: 30vh;
     min-height: 250px;
-    .full-click {
+    .card--full-click {
         display: block;
         position: absolute;
         top: 0;
@@ -133,7 +133,7 @@
     @media (min-width: 768px) {
         width: 45vw;
     }
-        &-content {
+        .card__content {
             background-color: white;
             border-radius: 0 0 20px 20px;
             line-height: 50%;
@@ -141,10 +141,10 @@
             margin: 0;
             position: relative;
             height: 80px;
-            p {
+            .content__text {
                 font-size: large;
             }
-            button {
+            .content__button {
                 background-color: white;
                 border: none;
                 font-size: 30px;
@@ -152,20 +152,19 @@
                 right: 5%;
                 bottom: 30%;
                 cursor: pointer;
-                @include button-heart-filling;
                 // make the button clickable because of overlay effect
                 z-index: 1;
             }
         }
-        .label {
-            background-color: $color-tertiary;
-            color: darken($color: $color-tertiary, $amount: 30%);
-            font-weight: bold;
-            position: absolute;
-            right: 3%;
-            top: 5%;
-            padding: 10px 15px;
-        }
+            .card__label {
+                background-color: $color-tertiary;
+                color: darken($color: $color-tertiary, $amount: 30%);
+                font-weight: bold;
+                position: absolute;
+                right: 3%;
+                top: 5%;
+                padding: 10px 15px;
+            }
     }
 }
 

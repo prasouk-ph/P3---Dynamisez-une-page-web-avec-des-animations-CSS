@@ -10,3 +10,13 @@ button {
     padding: 15px 20px;
     font-weight: bold;
 }
+
+.button-heart {
+    background-color: white;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    @include button-heart-filling;
+    // make the button clickable because of overlay effect
+    z-index: 1;
+}

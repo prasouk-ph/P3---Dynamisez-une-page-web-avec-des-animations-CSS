@@ -1,129 +1,138 @@
 // menu
-main {
-    header {
-        padding: 0 20px;
+.header {
+    &__button, &__link {
+        font-size: 24px;
+        border: none;
+        background-color: white;
+        position: absolute;
+        left: 3%;
+        color: black;
     }
-    .illustration {
-        img {
+}
+
+.illustration {
+        &__image {
             object-fit: cover;
             width: 100vw;
             height: 25vh;
         }
+}
+
+.menu {
+    background-color: $color-grey;
+    border-radius: 20px 20px 0 0;
+    position: relative;
+    top: -20px;
+    @media (min-width: 768px) {
+        text-align: center;
     }
-    .menu {
-        background-color: $color-grey;
-        border-radius: 20px 20px 0 0;
+    &__header {
+        padding: $section-padding;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
         position: relative;
-        top: -20px;
         @media (min-width: 768px) {
-            text-align: center;
+            justify-content: center;
         }
-        header {
-            justify-content: flex-start;
-            @media (min-width: 768px) {
-                justify-content: center;
-            }
-            h1 {
-                font-family: 'Shrikhand';
-            }
-            button {
-                right: 4%;
-                left: auto;
-                background-color: inherit;
-                font-size: 30px;
-                @include button-heart-filling;
-            }
+        &--title {
+            font-family: 'Shrikhand';
         }
-        .menu-container {
-            @media (min-width: 992px) {
-            display: flex;
-            justify-content: space-around;
-            }
-            @each $class in $menu-section-list {
-                .#{$class} {
-                    display: flex;
-                    flex-direction: column;
-                    padding: $section-padding;
-                    h2 {
-                        font-weight: normal;
-                        font-size: smaller;
-                        position: relative;
-                        margin-bottom: $card-padding;
-                        &::before {
-                            content: "";
-                            position: absolute;
-                            bottom: -25%;
-                            background-color: $color-tertiary;
-                            height: 2px;
-                            width: 35px;
-                        }
-                    } 
-                    @for $i from 1 through 3 {
-                        &:nth-child(#{$i}) {
-                            opacity: 0;
-                            animation: appear 0.7s $i * (0.5s) forwards;
-                        }
-                    }
-                }
-                .#{card-dish} {
-                    cursor: pointer;
-                    overflow: hidden;
-                    background-color: white;
-                    border-radius: $card-radius;
-                    margin-bottom: 20px;
-                    padding: 0 0 0 10px;
-                    display: flex;
-                    align-items: center;
-                    @media (min-width: 992px) {
-                        padding: 0;
-                        width: 29vw;
-                    }
-                    .card-content {
-                        font-size: medium;
-                        text-align: left;
-                        overflow: hidden;
-                        flex: 1;
-                        h3, p {
-                            text-overflow: ellipsis;
-                            overflow: hidden;
-                            white-space: nowrap;
-                            // to prevent overflow-y being hidden if using line-height property
-                            margin: 8px; 
-                        }
-                    }
-                    .price {
-                        align-self: flex-end;
-                        font-weight: bold;
-                        padding: 0 20px;
-                        transition: 1s;
-                    }
-                    .validation-box {
+        &--button {
+            position: absolute;
+            right: 4%;
+            background-color: inherit;
+        }
+    }
+    &__container {
+        @media (min-width: 992px) {
+        display: flex;
+        justify-content: space-around;
+        }
+        @each $class in $menu-section-list {
+            .#{$class} {
+                display: flex;
+                flex-direction: column;
+                padding: $section-padding;
+                &__title {
+                    font-weight: normal;
+                    font-size: smaller;
+                    position: relative;
+                    margin-bottom: $card-padding;
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        bottom: -25%;
                         background-color: $color-tertiary;
-                        color: white;
-                        padding: 25px;
-                        margin-right: -70px;
-                        transition: 0.4s;
-                        i {
-                            transition: 0.5s;
-                        }
+                        height: 2px;
+                        width: 35px;
                     }
-                    &:active > .validation-box{
-                        margin-right: 0;
-                    }
-                    &:active i {
-                        transform: rotate(1turn);
+                } 
+                @for $i from 1 through 3 {
+                    &:nth-child(#{$i}) {
+                        opacity: 0;
+                        animation: appear 0.7s $i * (0.5s) forwards;
                     }
                 }
             }
         }
-        .order-confirmation {
-            padding: 50px 20px;
-            text-align: center;
-            button {
-            @media (min-width: 768px) {
-                width: 70vw;
+        .card-dish {
+            cursor: pointer;
+            overflow: hidden;
+            background-color: white;
+            border-radius: $card-radius;
+            margin-bottom: 20px;
+            padding: 0 0 0 10px;
+            display: flex;
+            align-items: center;
+            @media (min-width: 992px) {
+                padding: 0;
+                width: 29vw;
             }
+        .card-content {
+            text-align: left;
+            overflow: hidden;
+            flex: 1;
+            .card__title, .card__text {
+                font-size: medium;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+                // to prevent overflow-y being hidden if using line-height property
+                margin: 8px; 
             }
+        }
+        .card__price {
+            align-self: flex-end;
+            font-weight: bold;
+            padding: 0 20px;
+            transition: 1s;
+        }
+        .validation-box {
+            background-color: $color-tertiary;
+            color: white;
+            padding: 25px;
+            margin-right: -70px;
+            transition: 0.4s;
+            &__icon {
+                transition: 0.5s;
+            }
+        }
+        &:active > .validation-box {
+            margin-right: 0;
+        }
+        &:active .validation-box__icon {
+            transform: rotate(1turn);
+        }
+    }
+}
+    .order-confirmation {
+        padding: 50px 20px;
+        text-align: center;
+        &__button {
+        @media (min-width: 768px) {
+            width: 70vw;
+        }
         }
     }
 }
