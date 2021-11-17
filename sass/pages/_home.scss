@@ -59,9 +59,10 @@
             }
             &:hover {
                 background: rgba($color-primary, 0.2);
+                box-shadow: 0px 0px 10px 10px rgba(225, 225, 225, 1);
                 & > i {
-                    color: $color-primary;
                     // effect on icon when hover button
+                    color: $color-primary;   
                 }
             }
             i {
