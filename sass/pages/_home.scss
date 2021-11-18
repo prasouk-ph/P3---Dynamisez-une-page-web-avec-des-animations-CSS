@@ -23,6 +23,7 @@
     }
 }
 
+
 // functioning
 .functioning {
     padding: $section-padding;
@@ -40,6 +41,7 @@
         }
     }
 }
+
 .nav__button {
     background-color: $color-grey;
     padding: 10px 0px;
@@ -65,6 +67,7 @@
         }
     }
 }
+
 .nav__icon {
     font-size: 16px;
     color: darken($color: $color-grey, $amount: 50%);
@@ -74,6 +77,7 @@
         font-size: 32px;
     }
 }
+
 .nav__sticker {
     position: relative;
     left: -15px;
@@ -89,10 +93,6 @@
         left: 0;
         top: -30px;
     }
-}
-.nav__text {
-    flex-grow: 1;
-    text-align: left;
 }
 
 
@@ -169,6 +169,7 @@
     }
 }
 
+
 // loader
 .overlay {
     position: fixed;
@@ -178,9 +179,10 @@
     bottom: 0;
     background-color: black;
     opacity: 0.5;
-    z-index: 2;
     animation: slide-to-bottom 1s 2s ease forwards;
-    .loader {
+    // prevent interaction until the end of animation
+    z-index: 2;
+    &__loader {
         cursor: wait;
         position: fixed;
         top: 50%;

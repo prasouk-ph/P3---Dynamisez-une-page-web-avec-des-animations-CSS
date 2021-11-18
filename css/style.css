@@ -250,11 +250,6 @@ button {
   }
 }
 
-.nav__text {
-  flex-grow: 1;
-  text-align: left;
-}
-
 .restaurant {
   padding: 20px;
 }
@@ -336,10 +331,10 @@ button {
   bottom: 0;
   background-color: black;
   opacity: 0.5;
-  z-index: 2;
   animation: slide-to-bottom 1s 2s ease forwards;
+  z-index: 2;
 }
-.overlay .loader {
+.overlay__loader {
   cursor: wait;
   position: fixed;
   top: 50%;
