@@ -115,6 +115,7 @@ button {
 .footer__image {
   filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(17deg) brightness(103%) contrast(105%);
   width: 80px;
+  margin: 10px 0;
 }
 @media (min-width: 768px) {
   .footer__image {
@@ -177,6 +178,7 @@ button {
   display: flex;
   flex-direction: column;
   padding-left: 15px;
+  margin-bottom: 20px;
 }
 @media (min-width: 768px) {
   .functioning__nav {
@@ -457,7 +459,7 @@ button {
 .starters {
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  padding: 10px 20px;
 }
 .starters__title {
   font-weight: normal;
@@ -477,7 +479,7 @@ button {
 .main-courses {
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  padding: 10px 20px;
 }
 .main-courses__title {
   font-weight: normal;
@@ -497,7 +499,7 @@ button {
 .desserts {
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  padding: 10px 20px;
 }
 .desserts__title {
   font-weight: normal;
@@ -528,7 +530,7 @@ button {
 }
 
 .order-confirmation {
-  padding: 50px 20px;
+  padding: 0px 20px 60px 20px;
   text-align: center;
 }
 @media (min-width: 768px) {

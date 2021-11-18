@@ -111,7 +111,7 @@
     .#{$class} {
         display: flex;
         flex-direction: column;
-        padding: $section-padding;
+        padding: 10px 20px;
         &__title {
             font-weight: normal;
             font-size: smaller;
@@ -140,7 +140,7 @@
 }
 
 .order-confirmation {
-    padding: 50px 20px;
+    padding: 0px 20px 60px 20px;
     text-align: center;
     &__button {
     @media (min-width: 768px) {
