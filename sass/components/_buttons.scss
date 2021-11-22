@@ -12,10 +12,9 @@ button {
 }
 
 .button-heart {
-    background-color: white;
+    background-color: inherit;
     border: none;
     font-size: 30px;
-    cursor: pointer;
     @include button-heart-filling;
     // make the button clickable because of overlay effect
     z-index: 1;

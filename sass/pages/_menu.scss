@@ -4,7 +4,7 @@
     &__button, &__link {
         font-size: 24px;
         border: none;
-        background-color: white;
+        background-color: inherit;
         position: absolute;
         left: 3%;
         color: black;
@@ -42,7 +42,6 @@
         &--button {
             position: absolute;
             right: 4%;
-            background-color: inherit;
         }
     }
     &__container {
