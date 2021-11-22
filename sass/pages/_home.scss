@@ -58,6 +58,7 @@
     }
     @media (min-width: 992px) {
         flex-direction: column;
+        position: relative;
     }
     &:hover {
         background: rgba($color-primary, 0.2);
@@ -88,11 +89,13 @@
     width: 10px;
     height: 10px;
     color: white;
-    text-align: center;
-    vertical-align: middle;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     @media (min-width: 992px) {
-        left: 0;
-        top: -30px;
+        position: absolute;
+        top: -20px;
+        left: auto;
     }
 }
 

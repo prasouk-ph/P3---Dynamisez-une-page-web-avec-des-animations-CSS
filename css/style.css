@@ -211,6 +211,7 @@ button {
 @media (min-width: 992px) {
   .nav__button {
     flex-direction: column;
+    position: relative;
   }
 }
 .nav__button:hover {
@@ -242,13 +243,15 @@ button {
   width: 10px;
   height: 10px;
   color: white;
-  text-align: center;
-  vertical-align: middle;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 @media (min-width: 992px) {
   .nav__sticker {
-    left: 0;
-    top: -30px;
+    position: absolute;
+    top: -20px;
+    left: auto;
   }
 }
 
