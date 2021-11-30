@@ -415,12 +415,6 @@ button {
   display: flex;
   align-items: center;
 }
-@media (min-width: 992px) {
-  .card__dish {
-    padding: 0;
-    width: 29vw;
-  }
-}
 .card__dish .card__content {
   text-align: left;
   overflow: hidden;
@@ -444,6 +438,18 @@ button {
 }
 .card__dish:active .validation-box__icon {
   transform: rotate(1turn);
+}
+@media (min-width: 992px) {
+  .card__dish {
+    padding: 0;
+    width: 29vw;
+  }
+  .card__dish:hover > .validation-box {
+    margin-right: 0;
+  }
+  .card__dish:hover .validation-box__icon {
+    transform: rotate(1turn);
+  }
 }
 
 .validation-box {
