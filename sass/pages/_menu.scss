@@ -38,6 +38,8 @@
         }
         &--title {
             font-family: 'Shrikhand';
+            // prevent title over heart in very small resolution
+            margin-right: 16px;
         }
         &--button {
             position: absolute;

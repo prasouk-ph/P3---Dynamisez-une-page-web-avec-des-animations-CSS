@@ -53,19 +53,27 @@
     display: flex;
     align-items: center;
     transition-duration: 0.4s;
+    &:active {
+        background: rgba($color-primary, 0.2);
+        box-shadow: 0px 0px 10px 10px rgba(225, 225, 225, 1);
+        & > i {
+            // effect on icon when hover button
+            color: $color-primary;   
+        }
+    }
     @media (min-width: 768px) {
         width: 28vw;
     }
     @media (min-width: 992px) {
         flex-direction: column;
         position: relative;
-    }
-    &:hover {
-        background: rgba($color-primary, 0.2);
-        box-shadow: 0px 0px 10px 10px rgba(225, 225, 225, 1);
-        & > i {
-            // effect on icon when hover button
-            color: $color-primary;   
+        &:hover {
+            background: rgba($color-primary, 0.2);
+            box-shadow: 0px 0px 10px 10px rgba(225, 225, 225, 1);
+            & > i {
+                // effect on icon when hover button
+                color: $color-primary;   
+            }
         }
     }
 }
