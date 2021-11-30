@@ -38,7 +38,7 @@
         }
         &--title {
             font-family: 'Shrikhand';
-            // prevent title over heart in very small resolution
+            // prevent title overlapping heart in very small resolution
             margin-right: 16px;
         }
         &--button {
@@ -142,8 +142,7 @@
 .menu__container > * {
     @for $i from 1 through 3 {
         &:nth-child(#{$i}) {
-            opacity: 0;
-            animation: appear 0.7s $i * (0.5s) forwards;
+            animation: appear 0.7s $i * (0.5s) both;
         }
     }
 }
